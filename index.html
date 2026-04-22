@@ -3,172 +3,255 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ambroise Gonon — Growth & UA Systems</title>
+<title>Ambroise Gonon — Growth & UA Lead</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#FAFAF7;
-  --ink:#0E0E0C;
-  --muted:#6B6B63;
-  --line:#E4E2DB;
-  --accent:#2E3FFF;
+:root{
+  --bg:#ffffff;
+  --ink:#0a0a0a;
+  --muted:#666;
+  --line:#eaeaea;
+  --accent:#3b5bff;
 }
 
 *{box-sizing:border-box;}
 body{
   margin:0;
-  font-family:Archivo,sans-serif;
+  font-family:Inter,sans-serif;
   background:var(--bg);
   color:var(--ink);
   line-height:1.5;
 }
 
-.mono{
-  font-family:JetBrains Mono, monospace;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-}
-
+/* layout */
 .container{
-  max-width:1100px;
+  max-width:1080px;
   margin:0 auto;
   padding:80px 24px;
 }
 
+/* NAV */
+nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  background:white;
+  border-bottom:1px solid var(--line);
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+}
+
+.logo{
+  font-weight:600;
+}
+
+.btn{
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:500;
+}
+
 /* HERO */
+.hero{
+  padding-top:100px;
+}
+
 h1{
   font-size:64px;
-  line-height:1;
+  line-height:1.05;
   margin:0 0 20px;
   letter-spacing:-0.03em;
 }
+
 .accent{color:var(--accent);}
-p.lead{
+
+.lead{
   font-size:18px;
   color:var(--muted);
   max-width:700px;
 }
 
-  <div style="margin-top:40px; display:flex; align-items:center; gap:16px;">
-  <img 
-    src="./photo.jpeg" 
-    alt="Ambroise Gonon"
-    style="width:64px; height:64px; border-radius:50%; object-fit:cover; border:1px solid #E4E2DB;"
-  />
-  
-  <div class="mono" style="color:#6B6B63;">
-    Available for Senior Growth / UA roles — EU Remote
-  </div>
-</div>
+/* CTA */
+.cta-row{
+  margin-top:28px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
-/* GRID */
+.primary{
+  background:var(--ink);
+  color:white;
+  padding:12px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.secondary{
+  border:1px solid var(--line);
+  padding:12px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  color:var(--ink);
+}
+
+/* sections */
+section{
+  margin-top:90px;
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:20px;
+  letter-spacing:-0.02em;
+}
+
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:16px;
 }
+
 .card{
   border:1px solid var(--line);
-  padding:20px;
+  padding:22px;
+  border-radius:12px;
 }
+
 .card h3{
   margin:10px 0;
 }
+
 .card p{
   color:var(--muted);
   font-size:14px;
-}
-
-/* SECTION */
-section{
-  margin-top:80px;
-}
-
-h2{
-  font-size:36px;
-  margin-bottom:20px;
-  letter-spacing:-0.02em;
-}
-
-.block{
-  margin-bottom:30px;
-}
-
-.badge{
-  color:var(--accent);
 }
 
 /* EXPERIENCE */
 .exp{
   border-left:2px solid var(--accent);
   padding-left:16px;
-  margin-bottom:24px;
+  margin-bottom:22px;
 }
 
 .exp h3{
   margin:0;
+  font-size:18px;
 }
 
 .exp p{
   color:var(--muted);
-  margin:8px 0 0;
+  font-size:14px;
 }
 
-/* CTA */
-.cta{
-  margin-top:80px;
-  padding:30px;
+/* METRICS */
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.metric{
   border:1px solid var(--line);
+  padding:20px;
+  border-radius:12px;
 }
 
+.metric strong{
+  font-size:22px;
+}
+
+/* FINAL CTA */
+.final{
+  border:1px solid var(--line);
+  padding:40px;
+  border-radius:16px;
+  margin-top:100px;
+  text-align:center;
+}
+
+.final h2{
+  margin-bottom:10px;
+}
+
+.final p{
+  color:var(--muted);
+}
+
+/* responsive */
+@media(max-width:800px){
+  h1{font-size:42px;}
+  .grid{grid-template-columns:1fr;}
+  .metrics{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
 <body>
 
+<nav>
+  <div class="logo">Ambroise Gonon</div>
+  <a class="btn" href="mailto:ambroise.gonon@gmail.com">Contact</a>
+</nav>
+
 <div class="container">
 
 <!-- HERO -->
-<h1>
-Scaling <span class="accent">Paid Acquisition</span><br/>
-through Creative Systems.
-</h1>
+<div class="hero">
+  <h1>
+    I build <span class="accent">growth systems</span><br/>
+    for mobile & subscription products.
+  </h1>
 
-<p class="lead">
-Growth & User Acquisition Lead with 5+ years of experience scaling mobile and subscription products through performance marketing, creative testing systems, and multi-channel acquisition at scale.
-</p>
+  <p class="lead">
+    Growth & User Acquisition Lead with 5+ years of experience scaling paid acquisition, creative testing systems, and multi-channel performance marketing across gaming and mobile ecosystems.
+  </p>
 
-<!-- CORE -->
+  <div class="cta-row">
+    <a class="primary" href="mailto:ambroise.gonon@gmail.com">Hire me</a>
+    <a class="secondary" href="https://github.com/">View work</a>
+  </div>
+
+  <div style="margin-top:30px; display:flex; gap:12px; align-items:center;">
+    <img src="./photo.jpeg" style="width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid #eaeaea;">
+    <div style="font-size:13px;color:#666;">
+      Available for Senior Growth / UA roles — Remote EU
+    </div>
+  </div>
+</div>
+
+<!-- VALUE -->
 <section>
-<h2>Acquisition systems, not campaigns.</h2>
+<h2>What I do</h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="mono badge">01 — Paid Media</div>
-<h3>Multi-channel scaling</h3>
-<p>Meta, TikTok, Google, YouTube, Reddit. Built for scale, not experimentation.</p>
+<h3>Paid Acquisition at scale</h3>
+<p>Meta, TikTok, Google, YouTube, Reddit. Built for ROAS-driven scaling.</p>
 </div>
 
 <div class="card">
-<div class="mono badge">02 — Creative</div>
-<h3>Creative is the lever</h3>
-<p>Performance driven by creative velocity, hooks, and iteration loops.</p>
+<h3>Creative systems</h3>
+<p>High-velocity creative testing loops with structured kill / scale logic.</p>
 </div>
 
 <div class="card">
-<div class="mono badge">03 — System</div>
-<h3>Testing frameworks</h3>
-<p>High-frequency creative testing with structured kill/scale logic.</p>
+<h3>Multi-market expansion</h3>
+<p>Launched campaigns across EU + LATAM (DE, PL, BR).</p>
 </div>
 
 <div class="card">
-<div class="mono badge">04 — Automation</div>
-<h3>AI-assisted workflows</h3>
-<p>AI used for scripting, variation generation, and localization at scale.</p>
+<h3>Automation & AI</h3>
+<p>AI-assisted workflows for scripts, variations, and localization.</p>
 </div>
 
 </div>
@@ -176,74 +259,59 @@ Growth & User Acquisition Lead with 5+ years of experience scaling mobile and su
 
 <!-- EXPERIENCE -->
 <section>
-
-<h2>Proven execution in high-spend environments.</h2>
+<h2>Experience</h2>
 
 <div class="exp">
 <h3>Head of Player Acquisition — Rivrs</h3>
-<p>
-Leading acquisition across 10 live products (1.5M users, €1.8M revenue).
-Managing multi-channel UA across Meta, TikTok, YouTube, Reddit.
-Built creator-driven acquisition system (“creator factory”) generating high-volume UGC content for scaling paid campaigns.
-Expanded acquisition across multiple markets (DE, PL, BR).
-</p>
+<p>1.5M users, €1.8M revenue. Multi-channel UA + creator-driven acquisition system.</p>
 </div>
 
 <div class="exp">
 <h3>User Acquisition — Homa Games</h3>
-<p>
-Managed $110K+ weekly ad spend across Meta, TikTok and Google Ads.
-Focused on ROAS optimization, CPI reduction, and creative performance scaling.
-Built structured testing frameworks for mobile game portfolios.
-</p>
+<p>$110K+ weekly spend. Meta, TikTok, Google. Focus on ROAS + creative scaling.</p>
 </div>
 
 <div class="exp">
-<h3>Growth Consulting / Experiments</h3>
-<p>
-Designed and executed acquisition systems for digital products and social-first ecosystems.
-Built viral TikTok acquisition loop reaching 80K+ followers and 90K+ engagement community.
-</p>
+<h3>Growth Consultant</h3>
+<p>Built viral acquisition loops (80K+ audience, 90K+ engagement).</p>
 </div>
 
 </section>
 
-<!-- WHY ME -->
+<!-- IMPACT -->
 <section>
+<h2>Impact</h2>
 
-<h2>Why I can scale your acquisition.</h2>
+<div class="metrics">
 
-<div class="grid">
-
-<div class="card">
-<h3>Scale mindset</h3>
-<p>Built for high-budget performance environments with strict ROAS constraints.</p>
+<div class="metric">
+<strong>$300K+</strong>
+<p class="lead">monthly ad spend managed</p>
 </div>
 
-<div class="card">
-<h3>Creative systems</h3>
-<p>Strong focus on creative iteration as primary growth driver.</p>
+<div class="metric">
+<strong>1.5M+</strong>
+<p class="lead">users acquired</p>
 </div>
 
-<div class="card">
-<h3>Multi-market</h3>
-<p>Experience launching campaigns across Europe and LATAM markets.</p>
+<div class="metric">
+<strong>10+</strong>
+<p class="lead">products scaled</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- FINAL -->
-<section class="cta">
-
-<h2>I build systems that turn creatives into scalable acquisition engines.</h2>
-
-<p class="lead">
-My approach combines creative velocity, performance discipline, and multi-channel scaling to build predictable growth engines — not isolated campaigns.
+<!-- FINAL CTA -->
+<div class="final">
+<h2>Let’s build a scalable acquisition engine.</h2>
+<p>
+I focus on turning creative output into predictable growth systems.
 </p>
-
-</section>
+<br/>
+<a class="primary" href="mailto:ambroise.gonon@gmail.com">Contact me</a>
+</div>
 
 </div>
 
