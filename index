@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ambroise Gonon — Growth & UA Systems</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#FAFAF7;
+  --ink:#0E0E0C;
+  --muted:#6B6B63;
+  --line:#E4E2DB;
+  --accent:#2E3FFF;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Archivo,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.5;
+}
+
+.mono{
+  font-family:JetBrains Mono, monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:80px 24px;
+}
+
+/* HERO */
+h1{
+  font-size:64px;
+  line-height:1;
+  margin:0 0 20px;
+  letter-spacing:-0.03em;
+}
+.accent{color:var(--accent);}
+p.lead{
+  font-size:18px;
+  color:var(--muted);
+  max-width:700px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.card{
+  border:1px solid var(--line);
+  padding:20px;
+}
+.card h3{
+  margin:10px 0;
+}
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* SECTION */
+section{
+  margin-top:80px;
+}
+
+h2{
+  font-size:36px;
+  margin-bottom:20px;
+  letter-spacing:-0.02em;
+}
+
+.block{
+  margin-bottom:30px;
+}
+
+.badge{
+  color:var(--accent);
+}
+
+/* EXPERIENCE */
+.exp{
+  border-left:2px solid var(--accent);
+  padding-left:16px;
+  margin-bottom:24px;
+}
+
+.exp h3{
+  margin:0;
+}
+
+.exp p{
+  color:var(--muted);
+  margin:8px 0 0;
+}
+
+/* CTA */
+.cta{
+  margin-top:80px;
+  padding:30px;
+  border:1px solid var(--line);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<h1>
+Scaling <span class="accent">Paid Acquisition</span><br/>
+through Creative Systems.
+</h1>
+
+<p class="lead">
+Growth & User Acquisition Lead with 5+ years of experience scaling mobile and subscription products through performance marketing, creative testing systems, and multi-channel acquisition at scale.
+</p>
+
+<!-- CORE -->
+<section>
+<h2>Acquisition systems, not campaigns.</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="mono badge">01 — Paid Media</div>
+<h3>Multi-channel scaling</h3>
+<p>Meta, TikTok, Google, YouTube, Reddit. Built for scale, not experimentation.</p>
+</div>
+
+<div class="card">
+<div class="mono badge">02 — Creative</div>
+<h3>Creative is the lever</h3>
+<p>Performance driven by creative velocity, hooks, and iteration loops.</p>
+</div>
+
+<div class="card">
+<div class="mono badge">03 — System</div>
+<h3>Testing frameworks</h3>
+<p>High-frequency creative testing with structured kill/scale logic.</p>
+</div>
+
+<div class="card">
+<div class="mono badge">04 — Automation</div>
+<h3>AI-assisted workflows</h3>
+<p>AI used for scripting, variation generation, and localization at scale.</p>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+
+<h2>Proven execution in high-spend environments.</h2>
+
+<div class="exp">
+<h3>Head of Player Acquisition — Rivrs</h3>
+<p>
+Leading acquisition across 10 live products (1.5M users, €1.8M revenue).
+Managing multi-channel UA across Meta, TikTok, YouTube, Reddit.
+Built creator-driven acquisition system (“creator factory”) generating high-volume UGC content for scaling paid campaigns.
+Expanded acquisition across multiple markets (DE, PL, BR).
+</p>
+</div>
+
+<div class="exp">
+<h3>User Acquisition — Homa Games</h3>
+<p>
+Managed $110K+ weekly ad spend across Meta, TikTok and Google Ads.
+Focused on ROAS optimization, CPI reduction, and creative performance scaling.
+Built structured testing frameworks for mobile game portfolios.
+</p>
+</div>
+
+<div class="exp">
+<h3>Growth Consulting / Experiments</h3>
+<p>
+Designed and executed acquisition systems for digital products and social-first ecosystems.
+Built viral TikTok acquisition loop reaching 80K+ followers and 90K+ engagement community.
+</p>
+</div>
+
+</section>
+
+<!-- WHY ME -->
+<section>
+
+<h2>Why I can scale your acquisition.</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Scale mindset</h3>
+<p>Built for high-budget performance environments with strict ROAS constraints.</p>
+</div>
+
+<div class="card">
+<h3>Creative systems</h3>
+<p>Strong focus on creative iteration as primary growth driver.</p>
+</div>
+
+<div class="card">
+<h3>Multi-market</h3>
+<p>Experience launching campaigns across Europe and LATAM markets.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+<section class="cta">
+
+<h2>I build systems that turn creatives into scalable acquisition engines.</h2>
+
+<p class="lead">
+My approach combines creative velocity, performance discipline, and multi-channel scaling to build predictable growth engines — not isolated campaigns.
+</p>
+
+</section>
+
+</div>
+
+</body>
+</html>
