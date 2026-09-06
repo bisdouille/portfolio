@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Selected Work — Ambroise Gonon</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;
+  --ink:#0a0a0a;
+  --muted:#666;
+  --line:#eaeaea;
+  --soft:#f7f7f7;
+  --accent:#3b5bff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+body.locked{overflow:hidden}
+a{color:inherit}
+.container{max-width:1080px;margin:0 auto;padding:76px 24px}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.logo{font-weight:600}.nav-right{display:flex;gap:10px;align-items:center}.btn{padding:9px 13px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:500;background:#fff}.hero{padding-top:96px}.eyebrow{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}h1{font-size:64px;line-height:1.03;margin:0 0 20px;letter-spacing:-.045em;max-width:900px}.accent{color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:690px;margin:0}.profile{margin-top:28px;display:flex;gap:12px;align-items:center}.profile img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.profile div{font-size:13px;color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px}.metric{border:1px solid var(--line);padding:18px;border-radius:12px}.metric strong{font-size:24px;display:block;letter-spacing:-.02em}.metric span{font-size:12px;color:var(--muted)}
+section{margin-top:88px}h2{font-size:32px;letter-spacing:-.025em;margin:0 0 20px}.loop{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{border:1px solid var(--line);border-radius:12px;padding:16px;min-height:112px}.step .n{font-size:11px;color:var(--accent);font-weight:700}.step strong{display:block;margin-top:18px;font-size:15px}.step span{font-size:12px;color:var(--muted)}
+.case{border-top:1px solid var(--line);padding:34px 0}.case-head{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}.case h3{font-size:26px;letter-spacing:-.02em;margin:0 0 6px}.case .tag{font-size:12px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.06em}.case p{color:var(--muted);font-size:14px;margin:10px 0 0;max-width:620px}.mini-metrics{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:12px;background:#fff}.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.evidence.two{grid-template-columns:repeat(2,1fr)}.placeholder{min-height:170px;border:1px dashed #cfcfcf;border-radius:12px;background:linear-gradient(180deg,#fbfbfb,#f5f5f5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}.placeholder strong{font-size:13px}.placeholder span{font-size:11px;color:#888;margin-top:5px;max-width:220px}.placeholder .plus{font-size:24px;color:#b3b3b3;margin-bottom:8px}.markets{display:flex;gap:10px;flex-wrap:wrap}.market{border:1px solid var(--line);border-radius:10px;padding:11px 14px;font-size:13px}.note{margin-top:14px;color:var(--muted);font-size:13px}.toolbox{display:flex;gap:8px;flex-wrap:wrap}.tool{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px}.final{border:1px solid var(--line);padding:38px;border-radius:16px;margin-top:92px;text-align:center}.final h2{margin-bottom:8px}.final p{color:var(--muted);font-size:14px}.primary{display:inline-block;margin-top:14px;background:var(--ink);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:500}
+/* gate */
+#gate{position:fixed;z-index:1000;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:24px}.gate-card{width:100%;max-width:380px;border:1px solid var(--line);border-radius:16px;padding:28px}.gate-mark{width:38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:24px}.gate-card h1{font-size:26px;letter-spacing:-.025em;margin:0 0 8px}.gate-card p{font-size:13px;color:var(--muted);margin:0 0 20px}.gate-card label{font-size:12px;font-weight:600;display:block;margin-bottom:7px}.gate-card input{width:100%;border:1px solid #d9d9d9;border-radius:9px;padding:12px 13px;font:inherit;outline:none}.gate-card input:focus{border-color:#999}.gate-card button{width:100%;margin-top:10px;background:var(--ink);color:#fff;border:0;border-radius:9px;padding:12px 14px;font:inherit;font-weight:600;cursor:pointer}.error{height:18px;color:#b42318;font-size:11px;margin-top:7px}.gate-foot{margin-top:18px;font-size:11px;color:#999;text-align:center}
+@media(max-width:800px){h1{font-size:42px}.metrics{grid-template-columns:repeat(2,1fr)}.loop{grid-template-columns:1fr 1fr}.case-head{grid-template-columns:1fr}.mini-metrics{justify-content:flex-start}.evidence,.evidence.two{grid-template-columns:1fr}.container{padding-left:18px;padding-right:18px}.nav-right .btn:first-child{display:none}}
+@media(max-width:480px){h1{font-size:36px}.loop{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.metric strong{font-size:20px}}
+</style>
+</head>
+<body class="locked">
+<div id="gate">
+  <form class="gate-card" id="loginForm">
+    <div class="gate-mark">AG</div>
+    <h1>Selected work</h1>
+    <p>This page is access-restricted.</p>
+    <label for="password">Password</label>
+    <input id="password" type="password" autocomplete="current-password" placeholder="Enter password" autofocus />
+    <button type="submit">Access</button>
+    <div class="error" id="error"></div>
+    <div class="gate-foot">Ambroise Gonon</div>
+  </form>
+</div>
+
+<nav>
+  <div class="logo">Ambroise Gonon</div>
+  <div class="nav-right">
+    <a class="btn" href="#work">Selected work</a>
+    <a class="btn" href="mailto:ambroise.gonon@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="hero">
+    <div class="eyebrow">Performance creative strategy</div>
+    <h1>I build <span class="accent">creative systems</span> that turn audience insight into performance.</h1>
+    <p class="lead">From angles and creator sourcing to production, testing and iteration — with a paid acquisition mindset.</p>
+    <div class="profile">
+      <img src="../photo.jpg" alt="Ambroise Gonon">
+      <div>Growth Lead · Gaming, mobile & consumer products</div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><strong>50+</strong><span>active creators</span></div>
+      <div class="metric"><strong>50+</strong><span>videos / week</span></div>
+      <div class="metric"><strong>5</strong><span>languages in production</span></div>
+      <div class="metric"><strong>$110K</strong><span>weekly UA spend at Homa</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Creative loop</h2>
+    <div class="loop">
+      <div class="step"><div class="n">01</div><strong>Research</strong><span>Audience · competitors · comments</span></div>
+      <div class="step"><div class="n">02</div><strong>Ideate</strong><span>Angles · hooks · hypotheses</span></div>
+      <div class="step"><div class="n">03</div><strong>Produce</strong><span>Creators · briefs · editing</span></div>
+      <div class="step"><div class="n">04</div><strong>Test</strong><span>Structured variations</span></div>
+      <div class="step"><div class="n">05</div><strong>Scale</strong><span>Learn · iterate · repeat</span></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <div class="tag">Rivrs · Creative engine</div>
+          <h3>From creator sourcing to 50+ videos/week</h3>
+          <p>Built repeatable workflows across 10 live games, multiple markets and owned content accounts.</p>
+        </div>
+        <div class="mini-metrics">
+          <div class="pill">50+ creators</div>
+          <div class="pill">20+ owned accounts</div>
+          <div class="pill">5 languages</div>
+        </div>
+      </div>
+      <div class="evidence">
+        <div class="placeholder"><div class="plus">+</div><strong>Creator pipeline</strong><span>Insert sourcing / production workflow screenshot</span></div>
+        <div class="placeholder"><div class="plus">+</div><strong>Creative brief</strong><span>Insert real anonymised brief</span></div>
+        <div class="placeholder"><div class="plus">+</div><strong>Creative iterations</strong><span>Insert 3–4 executions from one concept</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <div class="tag">Homa Games · Performance foundation</div>
+          <h3>Creative testing at paid scale</h3>
+          <p>Managed mobile UA at ~$110K/week and started editing my own ads to test ideas faster.</p>
+        </div>
+        <div class="mini-metrics">
+          <div class="pill">Meta</div><div class="pill">TikTok</div><div class="pill">Google</div><div class="pill">Ad networks</div>
+        </div>
+      </div>
+      <div class="evidence two">
+        <div class="placeholder"><div class="plus">+</div><strong>Testing matrix</strong><span>Hypothesis → variants → performance → decision</span></div>
+        <div class="placeholder"><div class="plus">+</div><strong>Performance view</strong><span>Insert anonymised dashboard / creative analysis</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-head">
+        <div>
+          <div class="tag">Noka Matcha · DTC</div>
+          <h3>Raw footage → direct-response creative</h3>
+          <p>Managed acquisition and produced paid creatives directly from founder-provided footage.</p>
+        </div>
+        <div class="mini-metrics">
+          <div class="pill">Meta 5–6x ROAS</div>
+          <div class="pill">Google 8–12x ROAS</div>
+        </div>
+      </div>
+      <div class="evidence two">
+        <div class="placeholder"><div class="plus">+</div><strong>Raw → final ad</strong><span>Insert source footage + final execution</span></div>
+        <div class="placeholder"><div class="plus">+</div><strong>Performance → next test</strong><span>Insert reporting / creative learning excerpt</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Built across markets</h2>
+    <div class="markets">
+      <div class="market">🇫🇷 France</div>
+      <div class="market">🇩🇪 Germany</div>
+      <div class="market">🇵🇱 Poland</div>
+      <div class="market">🇧🇷 Brazil</div>
+    </div>
+    <div class="note">Research locally → brief centrally → validate locally → measure globally.</div>
+  </section>
+
+  <section>
+    <h2>Production multiplier</h2>
+    <div class="toolbox">
+      <div class="tool">Remotion</div>
+      <div class="tool">Claude Code</div>
+      <div class="tool">Codex</div>
+      <div class="tool">Localization workflows</div>
+      <div class="tool">Rapid variants</div>
+    </div>
+    <div class="note">Tools matter when they increase the number of good hypotheses we can test.</div>
+  </section>
+
+  <div class="final">
+    <h2>Creative should compound.</h2>
+    <p>Every test should make the next one better.</p>
+    <a class="primary" href="mailto:ambroise.gonon@gmail.com">ambroise.gonon@gmail.com</a>
+  </div>
+</div>
+
+<script>
+const HASH = '7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116';
+const gate = document.getElementById('gate');
+const form = document.getElementById('loginForm');
+const input = document.getElementById('password');
+const error = document.getElementById('error');
+
+function unlock(){
+  sessionStorage.setItem('selectedWorkAccess','1');
+  gate.style.display='none';
+  document.body.classList.remove('locked');
+}
+
+if(sessionStorage.getItem('selectedWorkAccess')==='1') unlock();
+
+async function sha256(value){
+  const data = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  error.textContent='';
+  const hash = await sha256(input.value);
+  if(hash===HASH){ unlock(); }
+  else { error.textContent='Incorrect password'; input.select(); }
+});
+</script>
+</body>
+</html>
