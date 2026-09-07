@@ -23,7 +23,7 @@ const translations = {
     "balance.eyebrow": "CREATIVE BALANCE",
     "balance.viral": "Virality",
     "balance.conversion": "Conversion",
-    "balance.result": "I can do both.",
+    "balance.result": "I <small>(try)</small> to do both.",
     "tool.title": "BUILT TO<br><span>MOVE FASTER.</span>",
     "tool.copy": "Internal production tool built to increase creative testing velocity.",
     "tool.timeLabel": "Video production time",
@@ -48,6 +48,7 @@ const translations = {
     "data.signal1": "Read the signal",
     "data.signal2": "Trust the hunch",
     "data.signal3": "Test the edge",
+    "data.tools": "ANALYTICS & ATTRIBUTION",
     "contact.phone": "Phone"
   },
   fr: {
@@ -74,7 +75,7 @@ const translations = {
     "balance.eyebrow": "ÉQUILIBRE CRÉATIF",
     "balance.viral": "Viralité",
     "balance.conversion": "Conversion",
-    "balance.result": "Je sais faire les deux.",
+    "balance.result": "I <small>(try)</small> to do both.",
     "tool.title": "CONSTRUIT POUR<br><span>ALLER PLUS VITE.</span>",
     "tool.copy": "Outil interne développé pour accélérer la production et multiplier les tests créatifs.",
     "tool.timeLabel": "Temps de production vidéo",
@@ -99,6 +100,7 @@ const translations = {
     "data.signal1": "Lire le signal",
     "data.signal2": "Suivre l’intuition",
     "data.signal3": "Tester la limite",
+    "data.tools": "ANALYSE & ATTRIBUTION",
     "contact.phone": "Téléphone"
   }
 };
@@ -244,24 +246,42 @@ function updateBalance(value) {
   const progress = Number(value) / 100;
   const width = balanceScale.clientWidth;
   const isMobile = window.innerWidth <= 560;
+  const viralWidth = balanceScale.querySelector(".balance-label--viral").offsetWidth;
+  const conversionWidth = balanceScale.querySelector(".balance-label--conversion").offsetWidth;
   let viralShift = 0;
   let conversionShift = 0;
+  let viralY = 0;
+  let conversionY = 0;
+  let viralRotate = 0;
+  let conversionRotate = 0;
 
   if (progress > .5) {
-    viralShift = isMobile ? progress * width - 54 : progress * width + 12;
+    const amount = (progress - .5) * 2;
+    const eased = amount * amount * (3 - 2 * amount);
+    viralShift = eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
+    viralY = Math.sin(amount * Math.PI) * 48;
+    viralRotate = Math.sin(amount * Math.PI) * 7;
   } else if (progress < .5) {
-    conversionShift = isMobile ? progress * width - width + 54 : progress * width - width - 12;
+    const amount = (.5 - progress) * 2;
+    const eased = amount * amount * (3 - 2 * amount);
+    conversionShift = -eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
+    conversionY = Math.sin(amount * Math.PI) * 48;
+    conversionRotate = -Math.sin(amount * Math.PI) * 7;
   }
 
   balanceScale.style.setProperty("--viral-shift", `${viralShift}px`);
   balanceScale.style.setProperty("--conversion-shift", `${conversionShift}px`);
+  balanceScale.style.setProperty("--viral-y", `${viralY}px`);
+  balanceScale.style.setProperty("--conversion-y", `${conversionY}px`);
+  balanceScale.style.setProperty("--viral-rotate", `${viralRotate}deg`);
+  balanceScale.style.setProperty("--conversion-rotate", `${conversionRotate}deg`);
 }
 
 function resetBalance() {
   if (!balanceIsDragging && Number(balanceRange.value) === 50) return;
   balanceIsDragging = false;
   balanceScale.classList.remove("is-dragging");
-  balanceResult.classList.add("is-visible");
+  balanceResult.classList.remove("is-visible");
   cancelAnimationFrame(balanceResetFrame);
 
   if (prefersReducedMotion.matches) {
@@ -287,10 +307,10 @@ balanceRange.addEventListener("pointerdown", () => {
   balanceIsDragging = true;
   cancelAnimationFrame(balanceResetFrame);
   balanceScale.classList.add("is-dragging");
-  balanceResult.classList.remove("is-visible");
+  balanceResult.classList.add("is-visible");
 });
 balanceRange.addEventListener("input", () => {
-  balanceResult.classList.remove("is-visible");
+  balanceResult.classList.add("is-visible");
   updateBalance(balanceRange.value);
 });
 balanceRange.addEventListener("pointerup", resetBalance);

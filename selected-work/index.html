@@ -123,7 +123,7 @@
           <input id="balanceRange" type="range" min="0" max="100" value="50" step="1" aria-label="Balance virality and conversion">
           <span class="balance-label balance-label--conversion" data-i18n="balance.conversion">Conversion</span>
         </div>
-        <p class="balance-result" id="balanceResult" data-i18n="balance.result" aria-live="polite">I can do both.</p>
+        <p class="balance-result" id="balanceResult" data-i18n-html="balance.result" aria-live="polite">I <small>(try)</small> to do both.</p>
       </div>
     </section>
 
@@ -186,7 +186,7 @@
       </div>
     </section>
 
-    <section class="data-section">
+    <section class="data-section" id="data">
       <div class="shell data-layout reveal">
         <div>
           <p class="eyebrow">DECISION MAKING</p>
@@ -195,6 +195,10 @@
         <div class="data-copy">
           <p data-i18n="data.copy">Performance data decides what scales. Instinct, cultural signals and a little creative mischief decide what gets tested next.</p>
           <div class="data-signals"><span data-i18n="data.signal1">Read the signal</span><span data-i18n="data.signal2">Trust the hunch</span><span data-i18n="data.signal3">Test the edge</span></div>
+          <div class="data-tools">
+            <small data-i18n="data.tools">ANALYTICS &amp; ATTRIBUTION</small>
+            <div><span>Tableau</span><span>PostHog</span><span>Adjust</span><span>Singular</span></div>
+          </div>
         </div>
       </div>
     </section>
