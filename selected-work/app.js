@@ -10,6 +10,7 @@ const translations = {
     "hero.eyebrow": "GROWTH LEAD · PERFORMANCE CREATIVE",
     "hero.title": "I BUILD<br><span>CREATIVE SYSTEMS.</span>",
     "hero.sub": "Performance creative strategy · UGC · Paid growth",
+    "hero.bio": "Growth Lead with 5+ years building scalable acquisition and creative systems across gaming and mobile apps. Currently leading creative and player acquisition across 10 multiplayer games, with experience managing creator networks, launching international markets, and building repeatable creative testing and production processes.",
     "metric.creators": "active creators",
     "metric.videos": "videos / week",
     "metric.languages": "languages",
@@ -24,8 +25,10 @@ const translations = {
     "balance.viral": "Virality",
     "balance.conversion": "Conversion",
     "balance.result": "I <small>(try)</small> to do both.",
+    "tool.eyebrow": "PRODUCTION MULTIPLIER",
     "tool.title": "BUILT TO<br><span>MOVE FASTER.</span>",
     "tool.copy": "Internal production tool built to increase creative testing velocity.",
+    "tool.approach": "",
     "tool.timeLabel": "Video production time",
     "tool.point1Title": "One script, more variants",
     "tool.point1Copy": "Reusable templates turn ideas into multiple executions quickly.",
@@ -60,8 +63,9 @@ const translations = {
     "gate.error": "Mot de passe incorrect",
     "nav.contact": "Contact",
     "hero.eyebrow": "GROWTH LEAD · PERFORMANCE CRÉATIVE",
-    "hero.title": "JE CONSTRUIS DES<br><span>SYSTÈMES CRÉATIFS.</span>",
+    "hero.title": "VITE FAIT,<br><span>MIEUX FAIT.</span>",
     "hero.sub": "Stratégie créative · UGC · Acquisition payante",
+    "hero.bio": "Growth Lead depuis plus de 5 ans, je construis des systèmes d’acquisition et de production créative capables de passer à l’échelle dans le gaming et les applications mobiles. Je pilote aujourd’hui la création et l’acquisition joueurs de 10 jeux multijoueurs, avec une expérience en gestion de réseaux de créateurs, lancement de marchés internationaux et structuration de processus reproductibles de test et de production créative.",
     "metric.creators": "créateurs actifs",
     "metric.videos": "vidéos / semaine",
     "metric.languages": "langues",
@@ -76,8 +80,10 @@ const translations = {
     "balance.viral": "Viralité",
     "balance.conversion": "Conversion",
     "balance.result": "I <small>(try)</small> to do both.",
-    "tool.title": "CONSTRUIT POUR<br><span>ALLER PLUS VITE.</span>",
+    "tool.eyebrow": "",
+    "tool.title": "REPENSER TOUTE<br>LA CHAÎNE DE PRODUCTION<br><span>POUR ALLER PLUS VITE.</span>",
     "tool.copy": "Outil interne développé pour accélérer la production et multiplier les tests créatifs.",
+    "tool.approach": "Je consolide ce qui fonctionne, j’élimine les frictions pour aller plus vite, tester davantage, isoler les facteurs de succès et scaler ce qui fonctionne.",
     "tool.timeLabel": "Temps de production vidéo",
     "tool.point1Title": "Un script, plus de variantes",
     "tool.point1Copy": "Des templates réutilisables transforment rapidement une idée en plusieurs exécutions.",
@@ -110,7 +116,10 @@ let currentLanguage = localStorage.getItem(languageStorageKey) === "fr" ? "fr" :
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function t(key) {
-  return translations[currentLanguage][key] || translations.en[key] || key;
+  if (Object.prototype.hasOwnProperty.call(translations[currentLanguage], key)) {
+    return translations[currentLanguage][key];
+  }
+  return translations.en[key] ?? key;
 }
 
 function setLanguage(language) {

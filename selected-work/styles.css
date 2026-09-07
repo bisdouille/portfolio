@@ -51,6 +51,8 @@ h2 span { color: var(--acid-deep); }
 .hero__title { max-width: 1080px; font-size: clamp(61px, 9.5vw, 142px); }
 .hero__title span { color: var(--acid-deep); }
 .hero__sub { margin: 28px 0 0; color: var(--muted); font-size: clamp(14px, 1.5vw, 18px); }
+.hero__bio { max-width: 780px; margin: 21px 0 0; color: #4f524b; font-size: clamp(12px, 1.05vw, 14px); font-weight: 500; line-height: 1.55; }
+html[lang="fr"] .hero__title { max-width: 980px; font-size: clamp(57px, 8.35vw, 125px); }
 .metrics { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 70px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .metric { min-height: 112px; padding: 20px 18px; border-right: 1px solid var(--line); }
 .metric:first-child { padding-left: 0; }
@@ -122,11 +124,15 @@ h2 span { color: var(--acid-deep); }
 
 .tool-section { padding: 150px 0; }
 .tool-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.tool-heading .eyebrow:empty { display: none; }
+html[lang="fr"] .tool-heading h2 { max-width: 790px; font-size: clamp(39px, 4.4vw, 66px); line-height: .92; letter-spacing: -.055em; }
 .tool-result-wrap { padding-bottom: 8px; }
 .tool-result-wrap > p { margin: 0 0 9px; color: #4d5049; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .tool-result { display: flex; align-items: center; gap: 16px; padding-bottom: 8px; }
 .tool-result strong { font-family: "Archivo Black", Impact, sans-serif; font-size: clamp(26px, 3vw, 44px); letter-spacing: -.06em; white-space: nowrap; }
 .tool-result span { color: var(--acid-deep); font-size: 30px; }
+.tool-approach { max-width: 720px; margin: 14px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.tool-approach:empty { display: none; }
 .tool-detail { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: clamp(40px, 6vw, 86px); align-items: center; margin-top: 55px; }
 .browser-frame { min-width: 0; overflow: hidden; background: #111; border: 1px solid rgba(0,0,0,.28); border-radius: 18px; box-shadow: 0 35px 80px rgba(20,22,16,.17); }
 .browser-bar { display: flex; align-items: center; gap: 6px; height: 44px; padding: 0 15px; background: #22231f; border-bottom: 1px solid rgba(255,255,255,.08); }
@@ -213,7 +219,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .language-button { padding: 5px 7px; }
   .hero { padding: 125px 0 45px; }
   .hero__title { font-size: clamp(46px, 13.8vw, 64px); }
+  html[lang="fr"] .hero__title { font-size: clamp(43px, 12vw, 56px); }
   .hero__sub { max-width: 270px; margin-top: 22px; }
+  .hero__bio { margin-top: 18px; font-size: 12px; }
   .metrics { margin-top: 45px; }
   .metric { min-height: 94px; padding: 15px 10px; }
   .metric:first-child { padding-left: 0; }
@@ -243,6 +251,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .noka-deck { width: 100%; height: 525px; }
   .noka-card { width: 70%; border-radius: 16px; }
   .tool-result { gap: 10px; }
+  html[lang="fr"] .tool-heading h2 { font-size: clamp(32px, 9.2vw, 42px); }
   .tool-detail { gap: 34px; margin-top: 35px; }
   .browser-frame { border-radius: 12px; }
   .browser-viewport { height: 420px; }
