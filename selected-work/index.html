@@ -1,203 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Selected Work — Ambroise Gonon</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#fff;
-  --ink:#0a0a0a;
-  --muted:#666;
-  --line:#eaeaea;
-  --soft:#f7f7f7;
-  --accent:#3b5bff;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
-body.locked{overflow:hidden}
-a{color:inherit}
-.container{max-width:1080px;margin:0 auto;padding:76px 24px}
-nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;font-size:14px}
-.logo{font-weight:600}.nav-right{display:flex;gap:10px;align-items:center}.btn{padding:9px 13px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:500;background:#fff}.hero{padding-top:96px}.eyebrow{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}h1{font-size:64px;line-height:1.03;margin:0 0 20px;letter-spacing:-.045em;max-width:900px}.accent{color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:690px;margin:0}.profile{margin-top:28px;display:flex;gap:12px;align-items:center}.profile img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}.profile div{font-size:13px;color:var(--muted)}
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px}.metric{border:1px solid var(--line);padding:18px;border-radius:12px}.metric strong{font-size:24px;display:block;letter-spacing:-.02em}.metric span{font-size:12px;color:var(--muted)}
-section{margin-top:88px}h2{font-size:32px;letter-spacing:-.025em;margin:0 0 20px}.loop{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{border:1px solid var(--line);border-radius:12px;padding:16px;min-height:112px}.step .n{font-size:11px;color:var(--accent);font-weight:700}.step strong{display:block;margin-top:18px;font-size:15px}.step span{font-size:12px;color:var(--muted)}
-.case{border-top:1px solid var(--line);padding:34px 0}.case-head{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}.case h3{font-size:26px;letter-spacing:-.02em;margin:0 0 6px}.case .tag{font-size:12px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.06em}.case p{color:var(--muted);font-size:14px;margin:10px 0 0;max-width:620px}.mini-metrics{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:12px;background:#fff}.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.evidence.two{grid-template-columns:repeat(2,1fr)}.placeholder{min-height:170px;border:1px dashed #cfcfcf;border-radius:12px;background:linear-gradient(180deg,#fbfbfb,#f5f5f5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px}.placeholder strong{font-size:13px}.placeholder span{font-size:11px;color:#888;margin-top:5px;max-width:220px}.placeholder .plus{font-size:24px;color:#b3b3b3;margin-bottom:8px}.markets{display:flex;gap:10px;flex-wrap:wrap}.market{border:1px solid var(--line);border-radius:10px;padding:11px 14px;font-size:13px}.note{margin-top:14px;color:var(--muted);font-size:13px}.toolbox{display:flex;gap:8px;flex-wrap:wrap}.tool{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px}.final{border:1px solid var(--line);padding:38px;border-radius:16px;margin-top:92px;text-align:center}.final h2{margin-bottom:8px}.final p{color:var(--muted);font-size:14px}.primary{display:inline-block;margin-top:14px;background:var(--ink);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:500}
-/* gate */
-#gate{position:fixed;z-index:1000;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;padding:24px}.gate-card{width:100%;max-width:380px;border:1px solid var(--line);border-radius:16px;padding:28px}.gate-mark{width:38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:24px}.gate-card h1{font-size:26px;letter-spacing:-.025em;margin:0 0 8px}.gate-card p{font-size:13px;color:var(--muted);margin:0 0 20px}.gate-card label{font-size:12px;font-weight:600;display:block;margin-bottom:7px}.gate-card input{width:100%;border:1px solid #d9d9d9;border-radius:9px;padding:12px 13px;font:inherit;outline:none}.gate-card input:focus{border-color:#999}.gate-card button{width:100%;margin-top:10px;background:var(--ink);color:#fff;border:0;border-radius:9px;padding:12px 14px;font:inherit;font-weight:600;cursor:pointer}.error{height:18px;color:#b42318;font-size:11px;margin-top:7px}.gate-foot{margin-top:18px;font-size:11px;color:#999;text-align:center}
-@media(max-width:800px){h1{font-size:42px}.metrics{grid-template-columns:repeat(2,1fr)}.loop{grid-template-columns:1fr 1fr}.case-head{grid-template-columns:1fr}.mini-metrics{justify-content:flex-start}.evidence,.evidence.two{grid-template-columns:1fr}.container{padding-left:18px;padding-right:18px}.nav-right .btn:first-child{display:none}}
-@media(max-width:480px){h1{font-size:36px}.loop{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.metric strong{font-size:20px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected performance creative work by Ambroise Gonon.">
+  <meta name="color-scheme" content="light">
+  <title>Selected Work — Ambroise Gonon</title>
+  <link rel="icon" href="../photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body class="locked">
-<div id="gate">
-  <form class="gate-card" id="loginForm">
-    <div class="gate-mark">AG</div>
-    <h1>Selected work</h1>
-    <p>This page is access-restricted.</p>
-    <label for="password">Password</label>
-    <input id="password" type="password" autocomplete="current-password" placeholder="Enter password" autofocus />
-    <button type="submit">Access</button>
-    <div class="error" id="error"></div>
-    <div class="gate-foot">Ambroise Gonon</div>
-  </form>
-</div>
-
-<nav>
-  <div class="logo">Ambroise Gonon</div>
-  <div class="nav-right">
-    <a class="btn" href="#work">Selected work</a>
-    <a class="btn" href="mailto:ambroise.gonon@gmail.com">Contact</a>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="hero">
-    <div class="eyebrow">Performance creative strategy</div>
-    <h1>I build <span class="accent">creative systems</span> that turn audience insight into performance.</h1>
-    <p class="lead">From angles and creator sourcing to production, testing and iteration — with a paid acquisition mindset.</p>
-    <div class="profile">
-      <img src="../photo.jpg" alt="Ambroise Gonon">
-      <div>Growth Lead · Gaming, mobile & consumer products</div>
-    </div>
-    <div class="metrics">
-      <div class="metric"><strong>50+</strong><span>active creators</span></div>
-      <div class="metric"><strong>50+</strong><span>videos / week</span></div>
-      <div class="metric"><strong>5</strong><span>languages in production</span></div>
-      <div class="metric"><strong>$110K</strong><span>weekly UA spend at Homa</span></div>
-    </div>
+  <div class="gate" id="gate">
+    <form class="gate__card" id="loginForm">
+      <div class="gate__mark" aria-hidden="true">AG</div>
+      <p class="gate__kicker">AMBROISE GONON</p>
+      <h1 data-i18n="gate.title">Selected work</h1>
+      <p class="gate__copy" data-i18n="gate.copy">This page is access-restricted.</p>
+      <label for="password" data-i18n="gate.password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" data-i18n-placeholder="gate.placeholder" placeholder="Enter password" autofocus>
+      <button type="submit" data-i18n="gate.access">Access</button>
+      <p class="gate__error" id="error" role="alert"></p>
+    </form>
   </div>
 
-  <section>
-    <h2>Creative loop</h2>
-    <div class="loop">
-      <div class="step"><div class="n">01</div><strong>Research</strong><span>Audience · competitors · comments</span></div>
-      <div class="step"><div class="n">02</div><strong>Ideate</strong><span>Angles · hooks · hypotheses</span></div>
-      <div class="step"><div class="n">03</div><strong>Produce</strong><span>Creators · briefs · editing</span></div>
-      <div class="step"><div class="n">04</div><strong>Test</strong><span>Structured variations</span></div>
-      <div class="step"><div class="n">05</div><strong>Scale</strong><span>Learn · iterate · repeat</span></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Ambroise Gonon — top">AMBROISE GONON</a>
+    <div class="topbar__actions">
+      <div class="language-switcher" aria-label="Language selector">
+        <button class="language-button" type="button" data-lang="fr" aria-label="Voir en français" aria-pressed="false"><span aria-hidden="true">🇫🇷</span><span>FR</span></button>
+        <button class="language-button" type="button" data-lang="en" aria-label="View in English" aria-pressed="true"><span aria-hidden="true">🇺🇸</span><span>EN</span></button>
+      </div>
+      <a class="contact-link" href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
-  </section>
+  </header>
 
-  <section id="work">
-    <h2>Selected work</h2>
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">GROWTH LEAD · PERFORMANCE CREATIVE</p>
+      <h1 class="hero__title reveal" data-i18n-html="hero.title">I BUILD<br><span>CREATIVE SYSTEMS.</span></h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">Performance creative strategy · UGC · Paid growth</p>
+      <div class="metrics reveal" aria-label="Key metrics">
+        <div class="metric"><strong>50+</strong><span data-i18n="metric.creators">active creators</span></div>
+        <div class="metric"><strong>50+</strong><span data-i18n="metric.videos">videos / week</span></div>
+        <div class="metric"><strong>5</strong><span data-i18n="metric.languages">languages</span></div>
+        <div class="metric"><strong>$110K</strong><span data-i18n="metric.spend">weekly UA spend at Homa</span></div>
+      </div>
+    </section>
 
-    <article class="case">
-      <div class="case-head">
+    <section class="rivrs-section" id="rivrs">
+      <div class="rivrs-sticky shell">
+        <div class="rivrs-copy reveal">
+          <p class="eyebrow">RIVRS · CREATIVE ENGINE</p>
+          <h2 data-i18n-html="rivrs.title">CREATIVE PRODUCTION<br><span>AT SCALE.</span></h2>
+          <div class="rivrs-stats">
+            <p><strong>50+</strong> <span data-i18n="metric.creators">active creators</span></p>
+            <p><strong>50+</strong> <span data-i18n="metric.videos">videos / week</span></p>
+            <p><strong>5</strong> <span data-i18n="metric.languages">languages</span></p>
+            <p><strong>10</strong> <span data-i18n="rivrs.games">live games</span></p>
+          </div>
+          <p class="markets" aria-label="Markets">FR <span>·</span> DE <span>·</span> PL <span>·</span> BR</p>
+        </div>
+
+        <div class="creative-window reveal" aria-label="Rivrs creative wall">
+          <div class="creative-grid" aria-hidden="true">
+            <div class="creative-column" data-direction="-1">
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-question.webp" data-src="media/web/rivrs-question.mp4" data-start="2" data-rate="1"></video><figcaption>HOOK TEST</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-progression.webp" data-src="media/web/rivrs-progression.mp4" data-start="11" data-rate="0.96"></video><figcaption>CREATOR · EN</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-rule.webp" data-src="media/web/rivrs-rule.mp4" data-start="5" data-rate="1.04"></video><figcaption>ITERATION 03</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-contrarian.webp" data-src="media/web/rivrs-contrarian.mp4" data-start="25" data-rate="1"></video><figcaption>HOOK · BR</figcaption></figure>
+            </div>
+            <div class="creative-column" data-direction="1">
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-unique.webp" data-src="media/web/rivrs-unique.mp4" data-start="1" data-rate="1"></video><figcaption>HOOK · DE</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-contrarian.webp" data-src="media/web/rivrs-contrarian.mp4" data-start="13" data-rate="0.98"></video><figcaption>CREATOR</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-question.webp" data-src="media/web/rivrs-question.mp4" data-start="19" data-rate="1.02"></video><figcaption>VARIANT · 02</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-progression.webp" data-src="media/web/rivrs-progression.mp4" data-start="20" data-rate="0.99"></video><figcaption>ITERATION · DE</figcaption></figure>
+            </div>
+            <div class="creative-column" data-direction="-1">
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-rule.webp" data-src="media/web/rivrs-rule.mp4" data-start="16" data-rate="0.95"></video><figcaption>ITERATION</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-progression.webp" data-src="media/web/rivrs-progression.mp4" data-start="3" data-rate="1.03"></video><figcaption>HOOK TEST · PL</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-unique.webp" data-src="media/web/rivrs-unique.mp4" data-start="12" data-rate="0.97"></video><figcaption>CREATOR · BR</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-question.webp" data-src="media/web/rivrs-question.mp4" data-start="8" data-rate="0.95"></video><figcaption>VARIANT · 04</figcaption></figure>
+            </div>
+            <div class="creative-column" data-direction="1">
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-unique.webp" data-src="media/web/rivrs-unique.mp4" data-start="5" data-rate="1.02"></video><figcaption>HOOK · EN</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-contrarian.webp" data-src="media/web/rivrs-contrarian.mp4" data-start="3" data-rate="1"></video><figcaption>CREATOR · DE</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-rule.webp" data-src="media/web/rivrs-rule.mp4" data-start="10" data-rate="0.97"></video><figcaption>ITERATION · 05</figcaption></figure>
+              <figure class="creative-card"><video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-progression.webp" data-src="media/web/rivrs-progression.mp4" data-start="16" data-rate="1.04"></video><figcaption>HOOK TEST</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hook-section dark-section" id="hooks">
+      <div class="shell split-layout">
+        <div class="section-copy reveal">
+          <p class="eyebrow">HOOK STRUCTURES</p>
+          <h2 data-i18n-html="hooks.title">MULTIPLE HOOKS.<br><span>SAME JOB.</span></h2>
+          <div class="selector selector--dark" id="hookSelector" role="group" aria-label="Creative opening selector">
+            <button type="button" class="selector__button is-active" data-src="media/web/rivrs-question.mp4" data-poster="media/posters/rivrs-question.webp" data-name-key="hooks.question" aria-pressed="true"><span>01</span><b data-i18n="hooks.question">Question-led</b></button>
+            <button type="button" class="selector__button" data-src="media/web/rivrs-progression.mp4" data-poster="media/posters/rivrs-progression.webp" data-name-key="hooks.progression" aria-pressed="false"><span>02</span><b data-i18n="hooks.progression">Progression</b></button>
+            <button type="button" class="selector__button" data-src="media/web/rivrs-contrarian.mp4" data-poster="media/posters/rivrs-contrarian.webp" data-name-key="hooks.contrarian" aria-pressed="false"><span>03</span><b data-i18n="hooks.contrarian">Contrarian</b></button>
+          </div>
+        </div>
+        <div class="feature-video reveal">
+          <video id="hookVideo" class="switch-video lazy-video" muted loop playsinline preload="none" poster="media/posters/rivrs-question.webp" data-src="media/web/rivrs-question.mp4"></video>
+          <div class="feature-video__label"><span>01</span><strong id="hookVideoLabel" data-i18n="hooks.question">Question-led</strong></div>
+          <button class="video-toggle" type="button" data-video="hookVideo" aria-label="Pause video">Ⅱ</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="balance-section" id="balance">
+      <div class="shell balance-layout reveal">
+        <p class="eyebrow" data-i18n="balance.eyebrow">CREATIVE BALANCE</p>
+        <div class="balance-scale" id="balanceScale">
+          <span class="balance-label balance-label--viral" data-i18n="balance.viral">Virality</span>
+          <input id="balanceRange" type="range" min="0" max="100" value="50" step="1" aria-label="Balance virality and conversion">
+          <span class="balance-label balance-label--conversion" data-i18n="balance.conversion">Conversion</span>
+        </div>
+        <p class="balance-result" id="balanceResult" data-i18n="balance.result" aria-live="polite">I can do both.</p>
+      </div>
+    </section>
+
+    <section class="tool-section shell" id="tool">
+      <div class="tool-heading reveal">
         <div>
-          <div class="tag">Rivrs · Creative engine</div>
-          <h3>From creator sourcing to 50+ videos/week</h3>
-          <p>Built repeatable workflows across 10 live games, multiple markets and owned content accounts.</p>
+          <p class="eyebrow">PRODUCTION MULTIPLIER</p>
+          <h2 data-i18n-html="tool.title">BUILT TO<br><span>MOVE FASTER.</span></h2>
         </div>
-        <div class="mini-metrics">
-          <div class="pill">50+ creators</div>
-          <div class="pill">20+ owned accounts</div>
-          <div class="pill">5 languages</div>
+        <div class="tool-result-wrap">
+          <p data-i18n="tool.timeLabel">Video production time</p>
+          <div class="tool-result"><strong>30 MIN</strong><span>→</span><strong>3 MIN</strong></div>
         </div>
       </div>
-      <div class="evidence">
-        <div class="placeholder"><div class="plus">+</div><strong>Creator pipeline</strong><span>Insert sourcing / production workflow screenshot</span></div>
-        <div class="placeholder"><div class="plus">+</div><strong>Creative brief</strong><span>Insert real anonymised brief</span></div>
-        <div class="placeholder"><div class="plus">+</div><strong>Creative iterations</strong><span>Insert 3–4 executions from one concept</span></div>
+      <p class="one-line reveal" data-i18n="tool.copy">Internal production tool built to increase creative testing velocity.</p>
+      <div class="tool-detail">
+        <div class="browser-frame reveal">
+          <div class="browser-bar"><span></span><span></span><span></span><p>creative-production.local</p></div>
+          <div class="browser-viewport"><img id="toolScreenshot" src="media/web/remotion-tool.webp" alt="Internal Remotion production tool interface" loading="lazy" width="1400" height="4852"></div>
+        </div>
+        <ul class="tool-benefits reveal">
+          <li><span>01</span><div><strong data-i18n="tool.point1Title">One script, more variants</strong><p data-i18n="tool.point1Copy">Reusable templates turn ideas into multiple executions quickly.</p></div></li>
+          <li><span>02</span><div><strong data-i18n="tool.point2Title">Localization built in</strong><p data-i18n="tool.point2Copy">Languages, voices and subtitles live in the same production flow.</p></div></li>
+          <li><span>03</span><div><strong data-i18n="tool.point3Title">Designed for the team</strong><p data-i18n="tool.point3Copy">Clear presets reduce handoffs and make production easier to operate.</p></div></li>
+          <li><span>04</span><div><strong data-i18n="tool.point4Title">Faster learning cycles</strong><p data-i18n="tool.point4Copy">Less production time means more creative hypotheses tested.</p></div></li>
+        </ul>
       </div>
-    </article>
+    </section>
 
-    <article class="case">
-      <div class="case-head">
+    <section class="noka-section" id="noka">
+      <div class="shell split-layout split-layout--noka">
+        <div class="section-copy reveal">
+          <p class="eyebrow">NOKA MATCHA · E-COMMERCE</p>
+          <h2 data-i18n-html="noka.title">SELLING<br><span>A FEELING.</span></h2>
+          <div class="selector" id="nokaSelector" role="group" aria-label="Noka creative angle selector">
+            <button type="button" class="selector__button is-active" data-angle="taste" data-name-key="noka.taste" data-copy-key="noka.tasteCopy" aria-pressed="true"><span>01</span><b data-i18n="noka.taste">Taste</b></button>
+            <button type="button" class="selector__button" data-angle="color" data-name-key="noka.color" data-copy-key="noka.colorCopy" aria-pressed="false"><span>02</span><b data-i18n="noka.color">Color</b></button>
+            <button type="button" class="selector__button" data-angle="ritual" data-name-key="noka.ritual" data-copy-key="noka.ritualCopy" aria-pressed="false"><span>03</span><b data-i18n="noka.ritual">Ritual</b></button>
+          </div>
+          <p class="angle-copy" id="nokaAngleCopy" data-i18n="noka.tasteCopy">Texture, preparation, indulgence.</p>
+          <div class="proof-row">
+            <div><span>META</span><strong>4×</strong><small>ROAS</small></div>
+            <div><span>GOOGLE</span><strong>4×</strong><small>ROAS</small></div>
+          </div>
+        </div>
+        <div class="noka-deck reveal" id="nokaDeck" aria-label="Noka creative angles">
+          <button class="noka-card is-active" type="button" data-angle="taste" aria-label="Taste creative">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/noka-texture.webp" data-src="media/web/noka-texture.mp4"></video>
+            <span>01 · <b data-i18n="noka.taste">Taste</b></span>
+          </button>
+          <button class="noka-card is-back-right" type="button" data-angle="color" aria-label="Color creative">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/noka-color.webp" data-src="media/web/noka-color.mp4"></video>
+            <span>02 · <b data-i18n="noka.color">Color</b></span>
+          </button>
+          <button class="noka-card is-back-left" type="button" data-angle="ritual" aria-label="Ritual creative">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="media/posters/noka-ritual.webp" data-src="media/web/noka-ritual.mp4"></video>
+            <span>03 · <b data-i18n="noka.ritual">Ritual</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="data-section">
+      <div class="shell data-layout reveal">
         <div>
-          <div class="tag">Homa Games · Performance foundation</div>
-          <h3>Creative testing at paid scale</h3>
-          <p>Managed mobile UA at ~$110K/week and started editing my own ads to test ideas faster.</p>
+          <p class="eyebrow">DECISION MAKING</p>
+          <h2 data-i18n-html="data.title">DATA-LED.<br><span>NEVER DATA-TRAPPED.</span></h2>
         </div>
-        <div class="mini-metrics">
-          <div class="pill">Meta</div><div class="pill">TikTok</div><div class="pill">Google</div><div class="pill">Ad networks</div>
-        </div>
-      </div>
-      <div class="evidence two">
-        <div class="placeholder"><div class="plus">+</div><strong>Testing matrix</strong><span>Hypothesis → variants → performance → decision</span></div>
-        <div class="placeholder"><div class="plus">+</div><strong>Performance view</strong><span>Insert anonymised dashboard / creative analysis</span></div>
-      </div>
-    </article>
-
-    <article class="case">
-      <div class="case-head">
-        <div>
-          <div class="tag">Noka Matcha · DTC</div>
-          <h3>Raw footage → direct-response creative</h3>
-          <p>Managed acquisition and produced paid creatives directly from founder-provided footage.</p>
-        </div>
-        <div class="mini-metrics">
-          <div class="pill">Meta 5–6x ROAS</div>
-          <div class="pill">Google 8–12x ROAS</div>
+        <div class="data-copy">
+          <p data-i18n="data.copy">Performance data decides what scales. Instinct, cultural signals and a little creative mischief decide what gets tested next.</p>
+          <div class="data-signals"><span data-i18n="data.signal1">Read the signal</span><span data-i18n="data.signal2">Trust the hunch</span><span data-i18n="data.signal3">Test the edge</span></div>
         </div>
       </div>
-      <div class="evidence two">
-        <div class="placeholder"><div class="plus">+</div><strong>Raw → final ad</strong><span>Insert source footage + final execution</span></div>
-        <div class="placeholder"><div class="plus">+</div><strong>Performance → next test</strong><span>Insert reporting / creative learning excerpt</span></div>
+    </section>
+
+    <section class="contact-section shell reveal" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <div class="contact-list">
+        <p><span>Email</span><strong>ambroise.gonon@gmail.com</strong></p>
+        <p><span data-i18n="contact.phone">Phone</span><strong>+33 6 62 81 71 08</strong></p>
       </div>
-    </article>
-  </section>
-
-  <section>
-    <h2>Built across markets</h2>
-    <div class="markets">
-      <div class="market">🇫🇷 France</div>
-      <div class="market">🇩🇪 Germany</div>
-      <div class="market">🇵🇱 Poland</div>
-      <div class="market">🇧🇷 Brazil</div>
-    </div>
-    <div class="note">Research locally → brief centrally → validate locally → measure globally.</div>
-  </section>
-
-  <section>
-    <h2>Production multiplier</h2>
-    <div class="toolbox">
-      <div class="tool">Remotion</div>
-      <div class="tool">Claude Code</div>
-      <div class="tool">Codex</div>
-      <div class="tool">Localization workflows</div>
-      <div class="tool">Rapid variants</div>
-    </div>
-    <div class="note">Tools matter when they increase the number of good hypotheses we can test.</div>
-  </section>
-
-  <div class="final">
-    <h2>Creative should compound.</h2>
-    <p>Every test should make the next one better.</p>
-    <a class="primary" href="mailto:ambroise.gonon@gmail.com">ambroise.gonon@gmail.com</a>
-  </div>
-</div>
-
-<script>
-const HASH = '7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116';
-const gate = document.getElementById('gate');
-const form = document.getElementById('loginForm');
-const input = document.getElementById('password');
-const error = document.getElementById('error');
-
-function unlock(){
-  sessionStorage.setItem('selectedWorkAccess','1');
-  gate.style.display='none';
-  document.body.classList.remove('locked');
-}
-
-if(sessionStorage.getItem('selectedWorkAccess')==='1') unlock();
-
-async function sha256(value){
-  const data = new TextEncoder().encode(value);
-  const digest = await crypto.subtle.digest('SHA-256', data);
-  return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
-}
-
-form.addEventListener('submit', async (e)=>{
-  e.preventDefault();
-  error.textContent='';
-  const hash = await sha256(input.value);
-  if(hash===HASH){ unlock(); }
-  else { error.textContent='Incorrect password'; input.select(); }
-});
-</script>
+    </section>
+  </main>
 </body>
 </html>
