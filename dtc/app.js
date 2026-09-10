@@ -123,7 +123,7 @@ function setLanguage(language) {
 document.querySelectorAll("[data-lang]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
 setLanguage(currentLanguage);
 
-const HASH = "7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116";
+const HASH = "b71386fb95b9ace8198f6d26d149d5659933b410be0c99dfdeec018c6bab7115";
 const gate = document.getElementById("gate");
 const loginForm = document.getElementById("loginForm");
 const passwordInput = document.getElementById("password");
