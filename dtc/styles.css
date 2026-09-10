@@ -119,8 +119,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .time-result { display: flex; align-items: center; gap: 14px; margin-top: 38px; }
 .time-result strong { font-family: "Archivo Black", Impact, sans-serif; font-size: clamp(24px,2.8vw,40px); letter-spacing: -.055em; }
 .time-result i { color: #8fe800; font-size: 28px; font-style: normal; }
-.tool-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 34px; }
-.tool-stack span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 999px; font-size: 8px; font-weight: 700; }
 .browser-frame { min-width: 0; overflow: hidden; background: #111; border-radius: 18px; box-shadow: 0 30px 75px rgba(20,22,16,.18); }
 .browser-bar { display: flex; align-items: center; gap: 6px; height: 42px; padding: 0 14px; background: #22231f; }
 .browser-bar > span { width: 8px; height: 8px; background: #777; border-radius: 50%; }
@@ -128,6 +126,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .browser-bar p { margin: 0 auto; padding-right: 38px; color: #91948a; font-size: 8px; }
 .browser-viewport { height: min(650px,52vw); overflow: hidden; }
 .browser-viewport img { display: block; width: 100%; height: auto; }
+
+.tools-section { padding: 52px 0; background: var(--white); border-block: 1px solid var(--line); }
+.tools-layout { display: grid; grid-template-columns: minmax(150px,.45fr) minmax(0,1.55fr); gap: 48px; align-items: center; }
+.tools-heading { font-size: clamp(28px,3.3vw,46px); }
+.tool-stack { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-stack span { padding: 10px 13px; border: 1px solid var(--line); border-radius: 999px; font-size: 10px; font-weight: 700; }
 
 .contact-section { padding: 62px 0 78px; }
 .contact-grid { display: grid; grid-template-columns: repeat(2,1fr); margin-top: 27px; border-block: 1px solid var(--line); }
@@ -147,6 +151,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .capabilities article:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.2); }
   .creative-strip { grid-template-columns: repeat(5, 190px); justify-content: start; overflow: hidden; }
   .browser-viewport { height: 540px; }
+  .tools-layout { grid-template-columns: 1fr; gap: 22px; }
 }
 
 @media (max-width: 560px) {
@@ -180,6 +185,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .creative-strip figure { border-radius: 8px; }
   .automation-layout { gap: 38px; }
   .browser-viewport { height: 420px; }
+  .tools-section { padding: 42px 0; }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-grid p + p { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
 }
