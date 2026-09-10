@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Performance marketing et creative strategy — Ambroise Gonon.">
+  <meta name="color-scheme" content="light">
+  <title>Performance Work — Ambroise Gonon</title>
+  <link rel="icon" href="../photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="locked">
+  <div class="gate" id="gate">
+    <form class="gate__card" id="loginForm">
+      <div class="gate__mark" aria-hidden="true">AG</div>
+      <p class="gate__kicker">AMBROISE GONON</p>
+      <h1 data-i18n="gate.title">Travaux sélectionnés</h1>
+      <p class="gate__copy" data-i18n="gate.copy">L’accès à cette page est restreint.</p>
+      <label for="password" data-i18n="gate.password">Mot de passe</label>
+      <input id="password" type="password" autocomplete="current-password" data-i18n-placeholder="gate.placeholder" placeholder="Saisir le mot de passe" autofocus>
+      <button type="submit" data-i18n="gate.access">Accéder</button>
+      <p class="gate__error" id="error" role="alert"></p>
+    </form>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">AMBROISE GONON</a>
+    <div class="topbar__actions">
+      <div class="language-switcher" aria-label="Sélecteur de langue">
+        <button class="language-button" type="button" data-lang="fr" aria-label="Voir en français" aria-pressed="true"><span aria-hidden="true">🇫🇷</span><span>FR</span></button>
+        <button class="language-button" type="button" data-lang="en" aria-label="View in English" aria-pressed="false"><span aria-hidden="true">🇺🇸</span><span>EN</span></button>
+      </div>
+      <a class="contact-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">PERFORMANCE MARKETING · CREATIVE STRATEGY</p>
+      <h1 class="hero__title reveal" data-i18n-html="hero.title">J’IDENTIFIE<br>CE QUI VEND.<br><span>PUIS JE LE SCALE.</span></h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">Meta Ads · E-commerce · Creative testing · Automatisation</p>
+      <p class="hero__bio reveal" data-i18n="hero.bio">Growth Lead hands-on avec plus de 5 ans d’expérience en acquisition et creative strategy. Je transforme les signaux de performance en créatives, campagnes et itérations actionnables.</p>
+      <div class="metrics reveal">
+        <div><strong>$110K</strong><span data-i18n="metric.spend">de budget UA hebdomadaire</span></div>
+        <div><strong>4×</strong><span data-i18n="metric.roas">ROAS e-commerce</span></div>
+        <div><strong>50+</strong><span data-i18n="metric.creatives">créatives / semaine</span></div>
+        <div><strong>5+</strong><span data-i18n="metric.years">ans d’expérience</span></div>
+      </div>
+    </section>
+
+    <section class="noka-section" id="noka">
+      <div class="shell noka-layout">
+        <div class="section-copy reveal">
+          <p class="eyebrow">NOKA MATCHA · E-COMMERCE</p>
+          <h2 data-i18n-html="noka.title">DU PRODUIT<br><span>À LA PERFORMANCE.</span></h2>
+          <p class="section-intro" data-i18n="noka.intro">Transformer les attributs sensoriels du produit en angles créatifs testables.</p>
+          <div class="angle-selector" id="nokaSelector" role="group" aria-label="Angles créatifs Noka">
+            <button type="button" class="angle-button is-active" data-angle="taste" aria-pressed="true"><span>01</span><b data-i18n="noka.taste">Goût</b></button>
+            <button type="button" class="angle-button" data-angle="color" aria-pressed="false"><span>02</span><b data-i18n="noka.color">Couleur</b></button>
+            <button type="button" class="angle-button" data-angle="ritual" aria-pressed="false"><span>03</span><b data-i18n="noka.ritual">Rituel</b></button>
+          </div>
+          <p class="angle-copy" id="nokaCopy" data-i18n="noka.tasteCopy">Texture, préparation, gourmandise.</p>
+          <div class="proof-row">
+            <div><small>META</small><strong>4×</strong><span>ROAS</span></div>
+            <div><small>GOOGLE</small><strong>4×</strong><span>ROAS</span></div>
+          </div>
+        </div>
+
+        <div class="noka-deck reveal" id="nokaDeck" aria-label="Créatives Noka Matcha">
+          <button class="noka-card is-active" type="button" data-angle="taste" aria-label="Créative goût">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-texture.webp" data-src="../selected-work/media/web/noka-texture.mp4"></video>
+            <span>01 · <b data-i18n="noka.taste">Goût</b></span>
+          </button>
+          <button class="noka-card is-back-right" type="button" data-angle="color" aria-label="Créative couleur">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-color.webp" data-src="../selected-work/media/web/noka-color.mp4"></video>
+            <span>02 · <b data-i18n="noka.color">Couleur</b></span>
+          </button>
+          <button class="noka-card is-back-left" type="button" data-angle="ritual" aria-label="Créative rituel">
+            <video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-ritual.webp" data-src="../selected-work/media/web/noka-ritual.mp4"></video>
+            <span>03 · <b data-i18n="noka.ritual">Rituel</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="operating-section" id="method">
+      <div class="shell">
+        <div class="operating-heading reveal">
+          <div><p class="eyebrow">META ADS · OPERATING SYSTEM</p><h2 data-i18n-html="method.title">DE LA CRÉA<br><span>AU SCALING.</span></h2></div>
+          <p data-i18n="method.copy">Je reste directement impliqué dans les campagnes, l’analyse et les itérations créatives.</p>
+        </div>
+        <div class="workflow reveal" aria-label="Workflow de performance">
+          <span data-i18n="flow.analyse">Analyser</span><i>→</i><span data-i18n="flow.hypothesis">Formuler</span><i>→</i><span data-i18n="flow.create">Produire</span><i>→</i><span data-i18n="flow.launch">Lancer</span><i>→</i><span data-i18n="flow.decide">Décider</span>
+        </div>
+        <div class="capabilities reveal">
+          <article><span>01</span><h3 data-i18n="cap.structure">Structure & lancement</h3><p data-i18n="cap.structureCopy">Des campagnes lisibles, conçues pour apprendre autant que pour performer.</p></article>
+          <article><span>02</span><h3 data-i18n="cap.read">Lecture des performances</h3><p data-i18n="cap.readCopy">Relier spend, créatives et signaux de conversion pour trouver le prochain levier.</p></article>
+          <article><span>03</span><h3 data-i18n="cap.budget">Allocation du budget</h3><p data-i18n="cap.budgetCopy">Renforcer les signaux solides, limiter les faux positifs et couper rapidement.</p></article>
+          <article><span>04</span><h3 data-i18n="cap.testing">Creative testing</h3><p data-i18n="cap.testingCopy">Décliner les hooks et isoler les variables qui expliquent la performance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision-section">
+      <div class="shell">
+        <div class="decision-heading reveal"><p class="eyebrow">DECISION MAKING</p><h2 data-i18n-html="decision.title">TESTER. LIRE.<br><span>DÉCIDER.</span></h2></div>
+        <div class="decision-grid reveal">
+          <article><strong>SCALE</strong><p data-i18n="decision.scale">Le signal se confirme sur plusieurs créatives et fenêtres d’analyse.</p></article>
+          <article><strong>ITERATE</strong><p data-i18n="decision.iterate">L’angle fonctionne, mais l’exécution laisse encore une variable à améliorer.</p></article>
+          <article><strong>STOP</strong><p data-i18n="decision.stop">Le test ne crée pas assez de valeur : on documente, on coupe, on avance.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="velocity-section" id="velocity">
+      <div class="shell velocity-heading reveal">
+        <div><p class="eyebrow">RIVRS · CREATIVE VELOCITY</p><h2 data-i18n-html="velocity.title">PRODUIRE PLUS.<br><span>APPRENDRE PLUS VITE.</span></h2></div>
+        <div class="velocity-metrics"><p><strong>50+</strong><span data-i18n="metric.creatives">créatives / semaine</span></p><p><strong>50+</strong><span data-i18n="velocity.creators">créateurs actifs</span></p><p><strong>5</strong><span data-i18n="velocity.languages">langues</span></p></div>
+      </div>
+      <div class="creative-strip reveal" aria-label="Sélection de créatives Rivrs">
+        <figure><video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-question.webp" data-src="../selected-work/media/web/rivrs-question.mp4"></video><figcaption>HOOK TEST</figcaption></figure>
+        <figure><video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-rule.webp" data-src="../selected-work/media/web/rivrs-rule.mp4"></video><figcaption>ITERATION</figcaption></figure>
+        <figure><video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-unique.webp" data-src="../selected-work/media/web/rivrs-unique.mp4"></video><figcaption>CREATOR</figcaption></figure>
+        <figure><video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-progression.webp" data-src="../selected-work/media/web/rivrs-progression.mp4"></video><figcaption>PROGRESSION</figcaption></figure>
+        <figure><video class="lazy-video" muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-contrarian.webp" data-src="../selected-work/media/web/rivrs-contrarian.mp4"></video><figcaption>CONTRARIAN</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="automation-section" id="automation">
+      <div class="shell automation-layout">
+        <div class="automation-copy reveal">
+          <p class="eyebrow">PRODUCTION SYSTEM</p>
+          <h2 data-i18n-html="automation.title">MOINS DE FRICTION.<br><span>PLUS DE TESTS.</span></h2>
+          <p data-i18n="automation.copy">Un outil interne construit pour transformer les idées en variantes localisées, prêtes à tester.</p>
+          <div class="time-result"><strong>30 MIN</strong><i>→</i><strong>3 MIN</strong></div>
+          <div class="tool-stack"><span>Tableau</span><span>PostHog</span><span>Adjust</span><span>Singular</span><span>Remotion</span></div>
+        </div>
+        <div class="browser-frame reveal">
+          <div class="browser-bar"><span></span><span></span><span></span><p>creative-production.local</p></div>
+          <div class="browser-viewport"><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" loading="lazy" width="1400" height="4852"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section" id="automation">
+      <div class="shell automation-layout">
+        <div class="automation-copy reveal">
+          <p class="eyebrow">PRODUCTION SYSTEM</p>
+          <h2 data-i18n-html="automation.title">MOINS DE FRICTION.<br><span>PLUS DE TESTS.</span></h2>
+          <p data-i18n="automation.copy">Un outil interne construit pour transformer les idées en variantes localisées, prêtes à tester.</p>
+          <div class="time-result"><strong>30 MIN</strong><i>→</i><strong>3 MIN</strong></div>
+          <div class="tool-stack"><span>Tableau</span><span>PostHog</span><span>Adjust</span><span>Singular</span><span>Remotion</span></div>
+        </div>
+        <div class="browser-frame reveal">
+          <div class="browser-bar"><span></span><span></span><span></span><p>creative-production.local</p></div>
+          <div class="browser-viewport"><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" loading="lazy" width="1400" height="4852"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section shell reveal" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <div class="contact-grid"><p><span>Email</span><strong>ambroise.gonon@gmail.com</strong></p><p><span data-i18n="contact.phone">Téléphone</span><strong>+33 6 62 81 71 08</strong></p></div>
+    </section>
+  </main>
+</body>
+</html>
