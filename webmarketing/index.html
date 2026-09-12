@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio webmarketing et e-commerce d’Ambroise Gonon.">
+  <meta name="color-scheme" content="light">
+  <title>Webmarketing &amp; e-commerce — Ambroise Gonon</title>
+  <link rel="icon" href="../photo.jpg">
+  <style>
+    :root{--ink:#17221d;--forest:#23483a;--moss:#66804d;--sage:#dfe8dc;--cream:#f5f1e7;--paper:#fffdf8;--terra:#c98b73;--muted:#68716b;--line:rgba(23,34,29,.14);--radius:20px;--shadow:0 24px 70px rgba(31,49,40,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--cream)}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--cream);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}body.locked{overflow:hidden}button,input{font:inherit;color:inherit}button,a{touch-action:manipulation}a{color:inherit}.shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}.eyebrow{margin:0 0 15px;color:var(--moss);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.section-title{max-width:780px;margin:0;font-size:clamp(38px,5.2vw,72px);font-weight:750;letter-spacing:-.055em;line-height:.98}.section-copy{max-width:620px;margin:22px 0 0;color:var(--muted);font-size:16px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.25,1)}.reveal.visible{opacity:1;transform:none}:focus-visible{outline:3px solid var(--terra);outline-offset:4px}
+    .gate{position:fixed;z-index:1000;inset:0;display:grid;place-items:center;padding:24px;background:#f7f5ef}.gate[hidden]{display:none}.gate-card{width:min(100%,370px)}.gate-mark{display:grid;place-items:center;width:46px;height:46px;margin-bottom:42px;color:#fff;background:var(--forest);border-radius:50%;font-size:12px;font-weight:800}.gate-kicker{margin:0 0 9px;color:var(--moss);font-size:10px;font-weight:800;letter-spacing:.15em}.gate h1{margin:0;font-size:29px;letter-spacing:-.04em}.gate-copy{margin:9px 0 28px;color:var(--muted);font-size:13px}.gate label{display:block;margin-bottom:7px;font-size:12px;font-weight:700}.gate input{width:100%;padding:13px 14px;background:#fff;border:1px solid #d3d7d1;border-radius:9px}.gate button{width:100%;margin-top:10px;padding:13px;color:#fff;background:var(--forest);border:0;border-radius:9px;font-weight:750;cursor:pointer}.gate-error{min-height:18px;margin:8px 0 0;color:#a43c2c;font-size:12px}
+    .topbar{position:fixed;z-index:100;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:17px 26px;background:rgba(245,241,231,.87);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.brand{font-size:11px;font-weight:800;letter-spacing:.13em;text-decoration:none}.nav{display:flex;align-items:center;gap:22px}.nav a{color:var(--muted);font-size:11px;font-weight:700;text-decoration:none}.nav a:last-child{padding:8px 12px;color:#fff;background:var(--forest);border-radius:999px}
+    .hero{display:grid;align-content:end;min-height:92svh;padding:150px 0 65px}.hero h1{max-width:1030px;margin:0;font-size:clamp(54px,8.2vw,112px);font-weight:760;letter-spacing:-.075em;line-height:.87}.hero h1 span{color:var(--forest)}.hero-intro{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-top:36px}.hero-intro>p{max-width:660px;margin:0;color:var(--muted);font-size:17px}.availability{justify-self:end;margin:0;padding-left:18px;border-left:3px solid var(--terra);font-size:13px;font-weight:750}.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin-top:58px;border-block:1px solid var(--line)}.metric{padding:20px 22px;border-right:1px solid var(--line)}.metric:first-child{padding-left:0}.metric:last-child{border-right:0}.metric strong{display:block;font-size:clamp(29px,3.2vw,44px);font-weight:760;letter-spacing:-.055em;line-height:1}.metric span{display:block;margin-top:8px;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase}
+    .approach{padding:105px 0;background:var(--paper)}.approach-grid{display:grid;grid-template-columns:.85fr 1.35fr;gap:90px;align-items:start}.steps{border-top:1px solid var(--line)}.step{display:grid;grid-template-columns:58px 170px 1fr;gap:12px;padding:25px 0;border-bottom:1px solid var(--line)}.step small{color:var(--terra);font-weight:800}.step h3{margin:0;font-size:16px}.step p{margin:0;color:var(--muted);font-size:14px}
+    .case{padding:105px 0;background:var(--sage)}.case-head{display:grid;grid-template-columns:1fr .65fr;gap:70px;align-items:end}.case-head .section-copy{margin:0}.case-kpis{display:grid;grid-template-columns:repeat(4,1fr);margin-top:54px;border-block:1px solid rgba(35,72,58,.24)}.case-kpis div{padding:20px;border-right:1px solid rgba(35,72,58,.2)}.case-kpis div:first-child{padding-left:0}.case-kpis div:last-child{border-right:0}.case-kpis strong{display:block;font-size:32px;letter-spacing:-.04em}.case-kpis span{display:block;margin-top:7px;color:#506157;font-size:10px;font-weight:700;text-transform:uppercase}.mission{display:grid;grid-template-columns:180px 1fr;gap:28px;margin-top:42px}.mission h3{margin:0;font-size:15px}.mission p{max-width:760px;margin:0;color:#506157;font-size:15px}
+    .report-carousel{position:relative;margin-top:58px}.report-viewport{overflow:hidden}.report-track{display:flex;gap:18px;overflow-x:auto;padding:10px 4px 24px;scroll-snap-type:x mandatory;scrollbar-width:none}.report-track::-webkit-scrollbar{display:none}.report-slide{position:relative;flex:0 0 min(82%,930px);margin:0;overflow:hidden;aspect-ratio:16/9;background:#fff;border-radius:16px;box-shadow:var(--shadow);scroll-snap-align:center}.report-slide img{display:block;width:100%;height:100%;object-fit:cover}.report-slide--locked img{filter:blur(9px) saturate(.72);transform:scale(1.04)}.report-cover{position:absolute;inset:0;display:grid;place-items:center;background:rgba(23,34,29,.34)}.report-cover a{padding:14px 20px;color:#fff;background:var(--forest);border-radius:999px;font-size:13px;font-weight:800;text-decoration:none}.carousel-nav{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}.carousel-nav button{display:grid;place-items:center;width:42px;height:42px;background:var(--paper);border:1px solid var(--line);border-radius:50%;cursor:pointer}.pdf-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:var(--forest);font-size:13px;font-weight:800;text-underline-offset:4px}
+    .services{padding:105px 0;background:var(--paper)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid var(--line)}.service{min-height:190px;padding:24px 24px 24px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.service:nth-child(3n+2),.service:nth-child(3n+3){padding-left:24px}.service:nth-child(3n){border-right:0}.service small{color:var(--terra);font-weight:800}.service h3{margin:40px 0 10px;font-size:17px}.service p{margin:0;color:var(--muted);font-size:13px}
+    .journey{padding:105px 0;background:var(--cream)}.journey-list{margin-top:55px;border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:190px 1fr 1fr;gap:42px;padding:28px 0;border-bottom:1px solid var(--line)}.role strong{font-size:22px;letter-spacing:-.03em}.role h3{margin:0;font-size:15px}.role p{margin:0;color:var(--muted);font-size:14px}
+    .rivrs{padding:100px 0;color:#fff;background:var(--forest)}.rivrs .eyebrow{color:#b7caa9}.rivrs .section-copy{color:#cdd7d1}.rivrs-head{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:end}.rivrs-numbers{display:flex;justify-content:flex-end;gap:36px}.rivrs-numbers strong{display:block;font-size:31px}.rivrs-numbers span{display:block;color:#b9c8c0;font-size:9px;text-transform:uppercase}.creative-window{height:640px;margin-top:60px;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 91%,transparent)}.creative-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:min(900px,92%);margin:0 auto;perspective:1100px;transform:rotateY(-4deg) rotateX(1deg)}.creative-col{display:grid;gap:12px;will-change:transform}.creative-col:nth-child(2){padding-top:70px}.creative-col:nth-child(3){padding-top:25px}.creative-card{position:relative;overflow:hidden;aspect-ratio:9/16;background:#142c23;border-radius:14px;box-shadow:0 18px 45px rgba(0,0,0,.2);transition:transform .25s ease}.creative-card video{display:block;width:100%;height:100%;object-fit:cover}.creative-card span{position:absolute;left:10px;bottom:10px;padding:6px 8px;background:rgba(12,24,19,.72);border-radius:5px;font-size:8px;font-weight:700;letter-spacing:.08em
+    }.creative-card:hover{transform:scale(1.015)}
+    .builder{padding:105px 0;background:var(--paper)}.builder-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:75px;align-items:center}.builder-copy p{color:var(--muted);font-size:15px}.builder-copy strong{display:block;margin-top:32px;color:var(--forest);font-size:38px;letter-spacing:-.05em}.tool-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.tool-list span{padding:8px 11px;border:1px solid var(--line);border-radius:999px;font-size:10px;font-weight:750}.tool-frame{overflow:hidden;background:#1c201e;border-radius:18px;box-shadow:var(--shadow)}.tool-bar{height:38px;background:#292e2b}.tool-frame img{display:block;width:100%;height:560px;object-fit:cover;object-position:top}
+    .contact{padding:82px 0 100px;background:var(--cream)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:28px;border-block:1px solid var(--line)}.contact-item{padding:23px 0}.contact-item+ .contact-item{padding-left:28px;border-left:1px solid var(--line)}.contact-item span{display:block;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase}.contact-item button{margin-top:7px;padding:0;background:none;border:0;font-size:clamp(17px,2vw,25px);font-weight:750;letter-spacing:-.03em;cursor:pointer}.copy-note{min-height:18px;margin:14px 0 0;color:var(--moss);font-size:12px}
+    @media(max-width:900px){.shell{width:min(100% - 34px,720px)}.hero{min-height:auto;padding-top:140px}.hero-intro,.approach-grid,.case-head,.rivrs-head,.builder-grid{grid-template-columns:1fr}.availability{justify-self:start}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.step{grid-template-columns:45px 145px 1fr}.case-kpis{grid-template-columns:repeat(2,1fr)}.case-kpis div:nth-child(2){border-right:0}.case-kpis div:nth-child(-n+2){border-bottom:1px solid rgba(35,72,58,.2)}.service-grid{grid-template-columns:repeat(2,1fr)}.service:nth-child(n){padding-left:22px;border-right:1px solid var(--line)}.service:nth-child(2n){border-right:0}.role{grid-template-columns:140px 1fr}.role p{grid-column:2}.rivrs-numbers{justify-content:flex-start}.builder-grid{gap:42px}}
+    @media(max-width:580px){.shell{width:calc(100% - 28px)}.topbar{padding:14px}.nav a:not(:last-child){display:none}.hero{padding:115px 0 48px}.hero h1{font-size:clamp(46px,14vw,65px)}.hero-intro{gap:24px;margin-top:28px}.metrics{margin-top:40px}.metric{min-height:92px;padding:16px 10px}.metric:nth-child(3){padding-left:0}.approach,.case,.services,.journey,.rivrs,.builder{padding:72px 0}.section-title{font-size:clamp(36px,11vw,52px)}.step{grid-template-columns:38px 1fr}.step p{grid-column:2}.case-kpis{margin-top:38px}.case-kpis div{padding:16px 10px}.case-kpis div:nth-child(3){padding-left:0}.mission{grid-template-columns:1fr;gap:8px}.report-slide{flex-basis:94%}.service-grid{grid-template-columns:1fr;margin-top:38px}.service:nth-child(n){min-height:155px;padding:20px 0;border-right:0}.service h3{margin-top:24px}.role{grid-template-columns:1fr;gap:8px}.role p{grid-column:1}.creative-window{height:auto;margin-top:42px;overflow:visible;mask-image:none}.creative-wall{grid-template-columns:repeat(5,150px);width:100%;overflow-x:auto;padding-bottom:14px;perspective:none;transform:none;scroll-snap-type:x mandatory}.creative-col{display:contents}.creative-col:nth-child(n){padding:0}.creative-card{scroll-snap-align:start}.tool-frame img{height:390px}.contact-grid{grid-template-columns:1fr}.contact-item+ .contact-item{padding-left:0;border-top:1px solid var(--line);border-left:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.creative-col{transform:none!important}}
+  </style>
+</head>
+<body class="locked">
+  <div class="gate" id="gate">
+    <form class="gate-card" id="loginForm">
+      <div class="gate-mark" aria-hidden="true">AG</div>
+      <p class="gate-kicker">AMBROISE GONON</p>
+      <h1>Travaux sélectionnés</h1>
+      <p class="gate-copy">L’accès à cette page est restreint.</p>
+      <label for="password">Mot de passe</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="Saisir le mot de passe" autofocus>
+      <button type="submit">Accéder</button>
+      <p class="gate-error" id="gateError" role="alert"></p>
+    </form>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">AMBROISE GONON</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#approche">Approche</a><a href="#cas-client">Cas client</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow reveal">CHEF DE PROJET WEBMARKETING · E-COMMERCE</p>
+      <h1 class="reveal">Je pilote des projets webmarketing <span>de bout en bout.</span></h1>
+      <div class="hero-intro reveal">
+        <p>Paid acquisition, tracking, reporting et production créative pour des marques e-commerce et des produits digitaux. Je reste proche des campagnes, des données et des équipes qui exécutent.</p>
+        <p class="availability">5+ ans d’expérience<br>Remote · Bretagne</p>
+      </div>
+      <div class="metrics reveal">
+        <div class="metric"><strong>$110K</strong><span>Budget UA hebdomadaire</span></div>
+        <div class="metric"><strong>≈ 4×</strong><span>ROAS e-commerce piloté</span></div>
+        <div class="metric"><strong>50+</strong><span>Créatives par semaine</span></div>
+        <div class="metric"><strong>10</strong><span>Produits suivis simultanément</span></div>
+      </div>
+    </section>
+
+    <section class="approach" id="approche">
+      <div class="shell approach-grid">
+        <div class="reveal"><p class="eyebrow">MON APPROCHE</p><h2 class="section-title">Structurer, mesurer, puis améliorer</h2><p class="section-copy">Je cherche une lecture simple: ce qui a été lancé, ce que les données disent et la prochaine décision à prendre.</p></div>
+        <div class="steps reveal">
+          <article class="step"><small>01</small><h3>Cadrer</h3><p>Objectifs, marge, stock, budget et règles d’attribution.</p></article>
+          <article class="step"><small>02</small><h3>Mesurer</h3><p>Plan de marquage, tableaux de bord et cohérence entre régies et ventes.</p></article>
+          <article class="step"><small>03</small><h3>Itérer</h3><p>Campagnes, créatives, pages et automatisations selon les signaux observés.</p></article>
+          <article class="step"><small>04</small><h3>Rapporter</h3><p>Résultats, apprentissages, décisions et priorités suivantes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="cas-client">
+      <div class="shell">
+        <div class="case-head reveal">
+          <div><p class="eyebrow">CAS CLIENT · MARQUE X</p><h2 class="section-title">Matcha e-commerce</h2></div>
+          <p class="section-copy">Pilotage Meta et Google, analyse créative et reporting client. Les chiffres sont arrondis et la lecture du ROAS reste volontairement prudente.</p>
+        </div>
+        <div class="case-kpis reveal">
+          <div><strong>≈ 9,5 k€</strong><span>Spend Meta sur la période</span></div>
+          <div><strong>≈ 850</strong><span>Achats attribués Meta</span></div>
+          <div><strong>≈ 4×</strong><span>ROAS de pilotage</span></div>
+          <div><strong>+55 %</strong><span>Budget vs période précédente</span></div>
+        </div>
+        <div class="mission reveal"><h3>Ma mission</h3><p>Structurer les campagnes, suivre la performance, analyser les créatives et transformer les résultats en recommandations concrètes. Le reporting rapproche les chiffres des plateformes des ventes e-commerce pour limiter les conclusions trop optimistes.</p></div>
+        <div class="report-carousel reveal">
+          <div class="report-viewport">
+            <div class="report-track" id="reportTrack">
+              <figure class="report-slide"><img src="assets/reporting-01.webp" alt="Couverture du reporting client" width="1280" height="720" loading="lazy"></figure>
+              <figure class="report-slide"><img src="assets/reporting-02.webp" alt="Slide des chiffres clés du reporting" width="1280" height="720" loading="lazy"></figure>
+              <figure class="report-slide report-slide--locked"><img src="assets/reporting-03.webp" alt="Aperçu flouté de la suite du reporting" width="1280" height="720" loading="lazy"><div class="report-cover"><a href="assets/cas-client-matcha-reporting.pdf" target="_blank" rel="noopener">Ouvrir le cas client en PDF</a></div></figure>
+            </div>
+          </div>
+          <div class="carousel-nav"><button type="button" id="reportPrev" aria-label="Slide précédente">←</button><button type="button" id="reportNext" aria-label="Slide suivante">→</button></div>
+          <a class="pdf-link" href="assets/cas-client-matcha-reporting.pdf" target="_blank" rel="noopener">Voir le reporting complet en PDF ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="shell">
+        <p class="eyebrow reveal">6 LEVIERS</p><h2 class="section-title reveal">Ce que je peux prendre en charge</h2>
+        <div class="service-grid reveal">
+          <article class="service"><small>01</small><h3>Paid acquisition</h3><p>Meta, Google, TikTok. Structure, lancement, allocation et suivi des budgets.</p></article>
+          <article class="service"><small>02</small><h3>Tracking &amp; data</h3><p>Dashboards, qualité des événements et rapprochement entre acquisition et revenu.</p></article>
+          <article class="service"><small>03</small><h3>Marketing automation</h3><p>HubSpot, segmentation et workflows utiles au cycle de vie client.</p></article>
+          <article class="service"><small>04</small><h3>Créative</h3><p>Hooks, UGC, briefs, déclinaisons et boucle de retour vers les équipes.</p></article>
+          <article class="service"><small>05</small><h3>Reporting</h3><p>Une lecture client claire: performance, limites d’attribution et prochaines décisions.</p></article>
+          <article class="service"><small>06</small><h3>IA &amp; outils</h3><p>Agents, API et automatisations légères pour réduire les tâches répétitives.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey" id="parcours">
+      <div class="shell">
+        <p class="eyebrow reveal">PARCOURS</p><h2 class="section-title reveal">Acquisition, conseil et production</h2>
+        <div class="journey-list reveal">
+          <article class="role"><strong>Rivrs</strong><h3>Head of Player Acquisition</h3><p>Acquisition et production créative pour 10 jeux multijoueurs, avec plus de 50 créateurs dans 5 langues.</p></article>
+          <article class="role"><strong>Freelance</strong><h3>Growth consultant</h3><p>Accompagnement e-commerce: campagnes, créatives, reporting et recommandations opérationnelles.</p></article>
+          <article class="role"><strong>Homa Games</strong><h3>User Acquisition</h3><p>Jusqu’à 110 k$ de budget hebdomadaire sur Meta, TikTok et Google, avec une forte cadence de tests.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rivrs">
+      <div class="shell rivrs-head">
+        <div class="reveal"><p class="eyebrow">RIVRS · PRODUCTION CRÉATIVE</p><h2 class="section-title">Produire à l’échelle sans perdre le fil</h2><p class="section-copy">Un système de briefs, créateurs, localisation et analyse pour alimenter les campagnes chaque semaine.</p></div>
+        <div class="rivrs-numbers reveal"><p><strong>50+</strong><span>créateurs actifs</span></p><p><strong>50+</strong><span>vidéos / semaine</span></p><p><strong>5</strong><span>langues</span></p></div>
+      </div>
+      <div class="creative-window reveal" id="creativeWindow">
+        <div class="creative-wall">
+          <div class="creative-col" data-speed="-1"><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-question.webp" data-src="../selected-work/media/web/rivrs-question.mp4"></video><span>HOOK TEST</span></div><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-rule.webp" data-src="../selected-work/media/web/rivrs-rule.mp4"></video><span>ITERATION</span></div></div>
+          <div class="creative-col" data-speed="1"><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-unique.webp" data-src="../selected-work/media/web/rivrs-unique.mp4"></video><span>CREATOR</span></div><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-progression.webp" data-src="../selected-work/media/web/rivrs-progression.mp4"></video><span>PROGRESSION</span></div></div>
+          <div class="creative-col" data-speed="-.55"><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-contrarian.webp" data-src="../selected-work/media/web/rivrs-contrarian.mp4"></video><span>CONTRARIAN</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="builder">
+      <div class="shell builder-grid">
+        <div class="builder-copy reveal"><p class="eyebrow">BUILDER · AI-NATIVE</p><h2 class="section-title">J’enlève les frictions qui ralentissent l’équipe</h2><p>J’ai construit un outil interne avec Remotion pour transformer des inputs simples en variantes vidéo localisées et prêtes à tester.</p><strong>30 min → 3 min</strong><div class="tool-list"><span>Tableau</span><span>PostHog</span><span>Adjust</span><span>Singular</span><span>HubSpot</span><span>Remotion</span><span>IA automation</span></div></div>
+        <div class="tool-frame reveal"><div class="tool-bar"></div><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" width="1400" height="4852" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="shell reveal"><p class="eyebrow">CONTACT</p><h2 class="section-title">Échangeons</h2><div class="contact-grid"><div class="contact-item"><span>Email</span><button type="button" data-copy="ambroise.gonon@gmail.com">ambroise.gonon@gmail.com</button></div><div class="contact-item"><span>Téléphone</span><button type="button" data-copy="+33 6 62 81 71 08">+33 6 62 81 71 08</button></div></div><p class="copy-note" id="copyNote" aria-live="polite"></p></div>
+    </section>
+  </main>
+
+  <script>
+    const HASH="7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116";
+    const gate=document.getElementById("gate"),form=document.getElementById("loginForm"),input=document.getElementById("password"),error=document.getElementById("gateError");
+    async function sha256(value){const bytes=new TextEncoder().encode(value),digest=await crypto.subtle.digest("SHA-256",bytes);return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("")}
+    function unlock(){sessionStorage.setItem("webmarketingAccess","1");gate.hidden=true;document.body.classList.remove("locked")}
+    if(sessionStorage.getItem("webmarketingAccess")==="1")unlock();
+    form.addEventListener("submit",async e=>{e.preventDefault();error.textContent="";if(await sha256(input.value)===HASH)unlock();else{error.textContent="Mot de passe incorrect";input.select()}});
+    const reduced=matchMedia("(prefers-reduced-motion: reduce)");
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");revealObserver.unobserve(entry.target)}}),{threshold:.08});document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+    const videoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const video=entry.target;if(entry.isIntersecting){if(!video.src){video.src=video.dataset.src;video.load()}video.play().catch(()=>{})}else video.pause()}),{rootMargin:"180px 0px",threshold:.08});document.querySelectorAll("video[data-src]").forEach(video=>videoObserver.observe(video));
+    const track=document.getElementById("reportTrack");document.getElementById("reportPrev").addEventListener("click",()=>track.scrollBy({left:-track.clientWidth*.8,behavior:reduced.matches?"auto":"smooth"}));document.getElementById("reportNext").addEventListener("click",()=>track.scrollBy({left:track.clientWidth*.8,behavior:reduced.matches?"auto":"smooth"}));
+    let ticking=false;function updateWall(){ticking=false;if(reduced.matches||innerWidth<581)return;const windowEl=document.getElementById("creativeWindow"),rect=windowEl.getBoundingClientRect(),progress=(innerHeight-rect.top)/(innerHeight+rect.height)-.5;windowEl.querySelectorAll(".creative-col").forEach(col=>{const speed=parseFloat(col.dataset.speed||"0");col.style.transform=`translateY(${progress*115*speed}px)`})}addEventListener("scroll",()=>{if(!ticking){requestAnimationFrame(updateWall);ticking=true}},{passive:true});updateWall();
+    const copyNote=document.getElementById("copyNote");document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(button.dataset.copy);copyNote.textContent="Copié dans le presse-papiers."}catch{copyNote.textContent="Sélectionnez le texte pour le copier."}}));
+  </script>
+</body>
+</html>
