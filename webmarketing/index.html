@@ -184,7 +184,7 @@
   </main>
 
   <script>
-    const HASH="7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116";
+    const HASH="dc38e744929e4fb317d245f7a4b2fe010e236cf19253be3d70ed90248b72c05b";
     const gate=document.getElementById("gate"),form=document.getElementById("loginForm"),input=document.getElementById("password"),error=document.getElementById("gateError");
     async function sha256(value){const bytes=new TextEncoder().encode(value),digest=await crypto.subtle.digest("SHA-256",bytes);return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,"0")).join("")}
     function unlock(){sessionStorage.setItem("webmarketingAccess","1");gate.hidden=true;document.body.classList.remove("locked")}
