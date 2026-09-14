@@ -42,6 +42,11 @@
     @media(prefers-reduced-motion:reduce){.growth-rotator>span{display:none;animation:none}.growth-rotator>span:first-child{display:block;opacity:1;transform:none}.report-carousel{height:auto}.report-sticky{position:static;transform:none!important}.report-track{max-width:100%;overflow-x:auto;transform:none!important;scroll-snap-type:x mandatory}.report-slide{flex-basis:min(88vw,930px);scroll-snap-align:center}}
     .growth-rotator>span{opacity:0;transform:translateY(8px)}.system-copy p:not(.panel-label){color:var(--muted)}
     .fit-line{display:grid;grid-template-columns:190px 1fr;gap:36px;align-items:start;max-width:none;padding-top:30px;border-top:1px solid rgba(255,255,255,.18)}.fit-line>span{padding-top:5px;color:#b7caa9;font-size:10px;font-weight:800;letter-spacing:.14em}.fit-line>p{max-width:820px;margin:0;font-size:clamp(25px,3vw,40px);font-weight:720;letter-spacing:-.04em;line-height:1.08}@media(max-width:580px){.fit-line{grid-template-columns:1fr;gap:12px}.fit-line>span{padding-top:0}.fit-line>p{font-size:clamp(25px,8vw,34px)}}
+    /* V4: warmer, livelier palette and a shorter reporting transition. */
+    :root{--ink:#10251c;--forest:#1b5e43;--moss:#638f3c;--sage:#eaf4d9;--cream:#fbf6ea;--paper:#fffdf7;--terra:#e99570;--muted:#647169;--line:rgba(16,37,28,.14);--shadow:0 24px 70px rgba(27,94,67,.13)}
+    .topbar{background:rgba(251,246,234,.88)}.hero{background:radial-gradient(circle at 82% 24%,rgba(201,239,113,.18),transparent 29%)}.hero h1 span,.growth-rotator>span{color:#287a4e}.case{padding-bottom:42px;background:var(--sage)}.report-carousel{height:150vh}.report-slide--locked img{filter:blur(6px) saturate(.82)}.now-section{background:linear-gradient(145deg,#15543d 0%,#1f6b49 100%)}.creative-panel{background:rgba(5,39,26,.28)}.system-panel .tool-list{gap:10px;align-content:start}.system-panel .tool-list span{padding:10px 14px;background:#fff;border-color:rgba(27,94,67,.16);font-size:11px}.system-panel{align-content:stretch}.fit-line>span,.now-section .eyebrow,.creative-panel .panel-label{color:#d3e9a4}
+    @media(max-width:580px){.case{padding-bottom:28px}.report-carousel{height:135vh}.system-panel .tool-list span{padding:9px 12px;font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.report-carousel{height:auto}}
   </style>
 </head>
 <body class="locked">
@@ -118,7 +123,7 @@
               <div class="report-track" id="reportTrack">
                 <figure class="report-slide"><img src="assets/reporting-01.webp" alt="Couverture du reporting client" width="1280" height="720" loading="lazy"></figure>
                 <figure class="report-slide"><img src="assets/reporting-02.webp" alt="Slide des chiffres clés du reporting" width="1280" height="720" loading="lazy"></figure>
-                <figure class="report-slide report-slide--locked"><img src="assets/reporting-03.webp" alt="Aperçu flouté de la suite du reporting" width="1280" height="720" loading="lazy"><div class="report-cover"><a href="assets/cas-client-matcha-reporting.pdf" target="_blank" rel="noopener">Ouvrir le cas client en PDF</a></div></figure>
+                <figure class="report-slide report-slide--locked"><img src="assets/reporting-04.webp" alt="Aperçu flouté du focus sur les sept derniers jours" width="1280" height="720" loading="lazy"><div class="report-cover"><a href="assets/cas-client-matcha-reporting.pdf" target="_blank" rel="noopener">Ouvrir le cas client en PDF</a></div></figure>
               </div>
             </div>
             <div class="carousel-nav"><button type="button" id="reportPrev" aria-label="Slide précédente">←</button><button type="button" id="reportNext" aria-label="Slide suivante">→</button></div>
@@ -171,7 +176,7 @@
           <article class="system-panel reveal">
             <div class="system-copy"><p class="panel-label">OUTILS &amp; AMÉLIORATION CONTINUE</p><h3>J’enlève les frictions qui ralentissent l’équipe</h3><p>J’ai construit un outil interne avec Remotion pour transformer des inputs simples en variantes vidéo localisées et prêtes à tester.</p><strong>30 min → 3 min</strong></div>
             <div class="tool-frame"><div class="tool-bar"></div><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" width="1400" height="4852" loading="lazy"></div>
-            <div class="tool-list"><span>Tableau</span><span>PostHog</span><span>Adjust</span><span>Singular</span><span>HubSpot</span><span>Remotion</span><span>IA automation</span></div>
+            <div class="tool-list"><span>Tableau</span><span>PostHog</span><span>Google Analytics</span><span>Adjust</span><span>Singular</span><span>HubSpot</span><span>Mailchimp</span><span>Notion</span><span>Figma</span><span>Premiere Pro</span><span>Photoshop</span><span>Remotion</span><span>IA &amp; API</span></div>
           </article>
         </div>
         <div class="fit-line reveal"><span>MON FIL CONDUCTEUR</span><p>J’identifie les opportunités de croissance, je choisis les bons leviers, je coordonne leur exécution et je rends les résultats lisibles.</p></div>
