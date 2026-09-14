@@ -51,6 +51,10 @@
     .system-stack{display:grid;gap:18px;align-content:start}.system-panel{grid-template-columns:.78fr 1.22fr}.tools-panel{padding:20px;color:var(--ink);background:var(--paper);border:1px solid rgba(255,255,255,.14);border-radius:22px}.tools-panel h3{margin:12px 0 18px;font-size:clamp(23px,2.2vw,32px);line-height:1;letter-spacing:-.04em}.tool-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 22px}.tool-group h4{margin:0 0 7px;color:var(--moss);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.tool-group .tool-list{gap:6px;margin:0}.tool-group .tool-list span{padding:6px 9px;background:#fff;border-color:rgba(27,94,67,.15);font-size:9px;line-height:1.1}.tools-fit{display:grid;grid-template-columns:130px 1fr;gap:18px;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}.tools-fit span{padding-top:3px;color:var(--moss);font-size:9px;font-weight:800;letter-spacing:.12em}.tools-fit p{margin:0;font-size:16px;font-weight:700;letter-spacing:-.025em;line-height:1.2}.now-showcase>.creative-panel{align-self:start}
     @media(max-width:900px){.system-stack{gap:16px}.tool-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:580px){.system-panel{grid-template-columns:1fr}.tools-panel{padding:17px}.tool-groups{grid-template-columns:1fr 1fr;gap:15px 12px}.tool-group .tool-list span{padding:6px 8px;font-size:8px}.tools-fit{grid-template-columns:1fr;gap:8px}.tools-fit p{font-size:15px}}
+    /* V6: keep the next section visible as soon as the report ends. */
+    .case{padding-bottom:8px}.report-carousel{height:100vh}.services{padding-top:42px}
+    @media(max-width:580px){.case{padding-bottom:6px}.report-carousel{height:auto}.report-sticky{position:static;transform:none!important}.report-track{max-width:100%;overflow-x:auto;transform:none!important;scroll-snap-type:x mandatory}.report-slide{flex-basis:88vw;scroll-snap-align:center}.services{padding-top:32px}}
+    @media(prefers-reduced-motion:reduce){.report-carousel{height:auto}}
   </style>
 </head>
 <body class="locked">
@@ -58,7 +62,6 @@
     <form class="gate-card" id="loginForm">
       <div class="gate-mark" aria-hidden="true">AG</div>
       <p class="gate-kicker">AMBROISE GONON</p>
-      <h1>Travaux sélectionnés</h1>
       <p class="gate-copy">L’accès à cette page est restreint.</p>
       <label for="password">Mot de passe</label>
       <input id="password" type="password" autocomplete="current-password" placeholder="Saisir le mot de passe" autofocus>
