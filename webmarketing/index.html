@@ -47,6 +47,10 @@
     .topbar{background:rgba(251,246,234,.88)}.hero{background:radial-gradient(circle at 82% 24%,rgba(201,239,113,.18),transparent 29%)}.hero h1 span,.growth-rotator>span{color:#287a4e}.case{padding-bottom:42px;background:var(--sage)}.report-carousel{height:150vh}.report-slide--locked img{filter:blur(6px) saturate(.82)}.now-section{background:linear-gradient(145deg,#15543d 0%,#1f6b49 100%)}.creative-panel{background:rgba(5,39,26,.28)}.system-panel .tool-list{gap:10px;align-content:start}.system-panel .tool-list span{padding:10px 14px;background:#fff;border-color:rgba(27,94,67,.16);font-size:11px}.system-panel{align-content:stretch}.fit-line>span,.now-section .eyebrow,.creative-panel .panel-label{color:#d3e9a4}
     @media(max-width:580px){.case{padding-bottom:28px}.report-carousel{height:135vh}.system-panel .tool-list span{padding:9px 12px;font-size:10px}}
     @media(prefers-reduced-motion:reduce){.report-carousel{height:auto}}
+    /* V5: separate the production system from the day-to-day toolkit. */
+    .system-stack{display:grid;gap:18px;align-content:start}.system-panel{grid-template-columns:.78fr 1.22fr}.tools-panel{padding:20px;color:var(--ink);background:var(--paper);border:1px solid rgba(255,255,255,.14);border-radius:22px}.tools-panel h3{margin:12px 0 18px;font-size:clamp(23px,2.2vw,32px);line-height:1;letter-spacing:-.04em}.tool-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 22px}.tool-group h4{margin:0 0 7px;color:var(--moss);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.tool-group .tool-list{gap:6px;margin:0}.tool-group .tool-list span{padding:6px 9px;background:#fff;border-color:rgba(27,94,67,.15);font-size:9px;line-height:1.1}.tools-fit{display:grid;grid-template-columns:130px 1fr;gap:18px;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}.tools-fit span{padding-top:3px;color:var(--moss);font-size:9px;font-weight:800;letter-spacing:.12em}.tools-fit p{margin:0;font-size:16px;font-weight:700;letter-spacing:-.025em;line-height:1.2}.now-showcase>.creative-panel{align-self:start}
+    @media(max-width:900px){.system-stack{gap:16px}.tool-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:580px){.system-panel{grid-template-columns:1fr}.tools-panel{padding:17px}.tool-groups{grid-template-columns:1fr 1fr;gap:15px 12px}.tool-group .tool-list span{padding:6px 8px;font-size:8px}.tools-fit{grid-template-columns:1fr;gap:8px}.tools-fit p{font-size:15px}}
   </style>
 </head>
 <body class="locked">
@@ -173,13 +177,24 @@
           <div class="creative-col" data-speed="-.55"><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-contrarian.webp" data-src="../selected-work/media/web/rivrs-contrarian.mp4" data-start="2.2"></video><span>CONTRARIAN</span></div><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-rule.webp" data-src="../selected-work/media/web/rivrs-rule.mp4" data-start="5.1"></video><span>LOCALISATION</span></div><div class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-unique.webp" data-src="../selected-work/media/web/rivrs-unique.mp4" data-start="6.4"></video><span>CREATOR CUT</span></div></div>
             </div>
           </div></div>
-          <article class="system-panel reveal">
-            <div class="system-copy"><p class="panel-label">OUTILS &amp; AMÉLIORATION CONTINUE</p><h3>J’enlève les frictions qui ralentissent l’équipe</h3><p>J’ai construit un outil interne avec Remotion pour transformer des inputs simples en variantes vidéo localisées et prêtes à tester.</p><strong>30 min → 3 min</strong></div>
-            <div class="tool-frame"><div class="tool-bar"></div><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" width="1400" height="4852" loading="lazy"></div>
-            <div class="tool-list"><span>Tableau</span><span>PostHog</span><span>Google Analytics</span><span>Adjust</span><span>Singular</span><span>HubSpot</span><span>Mailchimp</span><span>Notion</span><span>Figma</span><span>Premiere Pro</span><span>Photoshop</span><span>Remotion</span><span>IA &amp; API</span></div>
-          </article>
+          <div class="system-stack">
+            <article class="system-panel reveal">
+              <div class="system-copy"><p class="panel-label">PRODUCTION &amp; AMÉLIORATION CONTINUE</p><h3>J’enlève les frictions qui ralentissent l’équipe</h3><p>J’ai construit un outil interne avec Remotion pour transformer des inputs simples en variantes vidéo localisées et prêtes à tester.</p><strong>30 min → 3 min</strong></div>
+              <div class="tool-frame"><div class="tool-bar"></div><img src="../selected-work/media/web/remotion-tool.webp" alt="Interface de l’outil interne de production vidéo" width="1400" height="4852" loading="lazy"></div>
+            </article>
+            <article class="tools-panel reveal">
+              <p class="panel-label">OUTILS</p>
+              <h3>Mon environnement de travail</h3>
+              <div class="tool-groups">
+                <div class="tool-group"><h4>Data &amp; mesure</h4><div class="tool-list"><span>Tableau</span><span>PostHog</span><span>Google Analytics</span><span>Adjust</span><span>Singular</span></div></div>
+                <div class="tool-group"><h4>Acquisition &amp; CRM</h4><div class="tool-list"><span>HubSpot</span><span>Mailchimp</span></div></div>
+                <div class="tool-group"><h4>Créative &amp; production</h4><div class="tool-list"><span>Figma</span><span>Premiere Pro</span><span>Photoshop</span><span>Remotion</span></div></div>
+                <div class="tool-group"><h4>Systèmes</h4><div class="tool-list"><span>Notion</span><span>IA &amp; API</span></div></div>
+              </div>
+              <div class="tools-fit"><span>MON FIL CONDUCTEUR</span><p>J’identifie les opportunités de croissance, je choisis les bons leviers, je coordonne leur exécution et je rends les résultats lisibles.</p></div>
+            </article>
+          </div>
         </div>
-        <div class="fit-line reveal"><span>MON FIL CONDUCTEUR</span><p>J’identifie les opportunités de croissance, je choisis les bons leviers, je coordonne leur exécution et je rends les résultats lisibles.</p></div>
       </div>
     </section>
 
