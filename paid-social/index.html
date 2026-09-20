@@ -64,6 +64,8 @@
     @media(max-width:900px){.creative-case{grid-template-columns:1fr;gap:30px}.noka-deck{height:520px}}
     @media(max-width:580px){.creative-case{margin-top:42px;padding:22px 16px}.creative-case-copy h3{font-size:35px}.noka-deck{width:100%;height:440px}.noka-card{width:70%}.services{padding-top:54px}}
     .hero h1{letter-spacing:-.045em}
+    .journey-punchline{display:block;margin-top:.14em;opacity:0;transform:translateY(.55em);transition:opacity .65s ease,transform .75s cubic-bezier(.2,.65,.25,1)}.section-title.visible .journey-punchline{opacity:1;transform:none;transition-delay:.48s}
+    @media(prefers-reduced-motion:reduce){.journey-punchline{opacity:1;transform:none;transition:none}}
     .now-section{display:none}
   </style>
 </head>
@@ -183,7 +185,7 @@
 
     <section class="journey" id="parcours">
       <div class="shell">
-        <p class="eyebrow reveal">MON PARCOURS</p><h2 class="section-title reveal">Formé à la rigueur des chiffres, sans perdre l’intuition créative.</h2>
+        <p class="eyebrow reveal">MON PARCOURS</p><h2 class="section-title reveal">Formé à la rigueur des chiffres,<span class="journey-punchline">sans perdre l’intuition créative.</span></h2>
         <div class="journey-list reveal">
           <article class="role"><strong>Rivrs</strong><h3>Head of Marketing / Head of Player Acquisition</h3><p>Je dirige la BU marketing de 7 personnes et pilote l’acquisition de 10 jeux sur l’ensemble des leviers : Paid Ads, organique, SEO, créative et localisation.</p></article>
           <article class="role"><strong>Freelance</strong><h3>Growth consultant</h3><p>Accompagnement e-commerce : campagnes, créatives, reporting et recommandations opérationnelles.</p></article>
