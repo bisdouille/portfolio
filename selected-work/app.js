@@ -232,6 +232,8 @@ function updateBalance(value) {
   let conversionY = 0;
   let viralRotate = 0;
   let conversionRotate = 0;
+  let ampersandShift = 0;
+  let ampersandOpacity = 0;
 
   if (progress > .5) {
     const amount = (progress - .5) * 2;
@@ -239,12 +241,16 @@ function updateBalance(value) {
     viralShift = eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
     viralY = Math.sin(amount * Math.PI) * 48;
     viralRotate = Math.sin(amount * Math.PI) * 7;
+    ampersandShift = eased * (width / 2 + (isMobile ? 20 : 42));
+    ampersandOpacity = Math.min(1, amount * 2.4);
   } else if (progress < .5) {
     const amount = (.5 - progress) * 2;
     const eased = amount * amount * (3 - 2 * amount);
     conversionShift = -eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
     conversionY = Math.sin(amount * Math.PI) * 48;
     conversionRotate = -Math.sin(amount * Math.PI) * 7;
+    ampersandShift = -eased * (width / 2 + (isMobile ? 20 : 42));
+    ampersandOpacity = Math.min(1, amount * 2.4);
   }
 
   balanceScale.style.setProperty("--viral-shift", `${viralShift}px`);
@@ -253,6 +259,8 @@ function updateBalance(value) {
   balanceScale.style.setProperty("--conversion-y", `${conversionY}px`);
   balanceScale.style.setProperty("--viral-rotate", `${viralRotate}deg`);
   balanceScale.style.setProperty("--conversion-rotate", `${conversionRotate}deg`);
+  balanceScale.style.setProperty("--ampersand-shift", `${ampersandShift}px`);
+  balanceScale.style.setProperty("--ampersand-opacity", balanceIsDragging ? ampersandOpacity : 0);
 }
 
 function resetBalance() {
