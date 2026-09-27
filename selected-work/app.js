@@ -241,7 +241,6 @@ function updateBalance(value) {
     viralShift = eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
     viralY = Math.sin(amount * Math.PI) * 48;
     viralRotate = Math.sin(amount * Math.PI) * 7;
-    ampersandShift = eased * (width / 2 + (isMobile ? 20 : 42));
     ampersandOpacity = Math.min(1, amount * 2.4);
   } else if (progress < .5) {
     const amount = (.5 - progress) * 2;
@@ -249,9 +248,19 @@ function updateBalance(value) {
     conversionShift = -eased * (isMobile ? width + 2 : width + viralWidth + conversionWidth + 70);
     conversionY = Math.sin(amount * Math.PI) * 48;
     conversionRotate = -Math.sin(amount * Math.PI) * 7;
-    ampersandShift = -eased * (width / 2 + (isMobile ? 20 : 42));
     ampersandOpacity = Math.min(1, amount * 2.4);
   }
+
+  const viralLeft = -viralWidth - 28 + viralShift;
+  const viralRight = -28 + viralShift;
+  const conversionLeft = width + 28 + conversionShift;
+  const conversionRight = width + 28 + conversionWidth + conversionShift;
+  const viralCenter = (viralLeft + viralRight) / 2;
+  const conversionCenter = (conversionLeft + conversionRight) / 2;
+  const gapCenter = viralCenter < conversionCenter
+    ? (viralRight + conversionLeft) / 2
+    : (conversionRight + viralLeft) / 2;
+  ampersandShift = gapCenter - width / 2;
 
   balanceScale.style.setProperty("--viral-shift", `${viralShift}px`);
   balanceScale.style.setProperty("--conversion-shift", `${conversionShift}px`);
