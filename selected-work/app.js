@@ -24,7 +24,7 @@ const translations = {
     "balance.eyebrow": "CREATIVE BALANCE",
     "balance.viral": "Virality",
     "balance.conversion": "Conversion",
-    "balance.result": "I <small>(try)</small> to do both.",
+    "balance.result": "I <small>(try to)</small> do both.",
     "tool.eyebrow": "PRODUCTION MULTIPLIER",
     "tool.title": "BUILT TO<br><span>MOVE FASTER.</span>",
     "tool.copy": "Internal production tool built to increase creative testing velocity.",
@@ -79,7 +79,7 @@ const translations = {
     "balance.eyebrow": "ÉQUILIBRE CRÉATIF",
     "balance.viral": "Viralité",
     "balance.conversion": "Conversion",
-    "balance.result": "I <small>(try)</small> to do both.",
+    "balance.result": "I <small>(try to)</small> do both.",
     "tool.eyebrow": "",
     "tool.title": "REPENSER TOUTE<br>LA CHAÎNE DE PRODUCTION<br><span>POUR ALLER PLUS VITE.</span>",
     "tool.copy": "Outil interne développé pour accélérer la production et multiplier les tests créatifs.",
@@ -154,37 +154,6 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 setLanguage(currentLanguage);
-
-const HASH = "7463f6b03b1a96e107176cfea31e2f32814021cfcf2ad0b2ca2122416ea1a116";
-const gate = document.getElementById("gate");
-const loginForm = document.getElementById("loginForm");
-const passwordInput = document.getElementById("password");
-const gateError = document.getElementById("error");
-
-function unlock() {
-  sessionStorage.setItem("selectedWorkAccess", "1");
-  gate.hidden = true;
-  document.body.classList.remove("locked");
-}
-
-async function sha256(value) {
-  const bytes = new TextEncoder().encode(value);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, "0")).join("");
-}
-
-if (sessionStorage.getItem("selectedWorkAccess") === "1") unlock();
-
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  gateError.textContent = "";
-  if (await sha256(passwordInput.value) === HASH) {
-    unlock();
-  } else {
-    gateError.textContent = t("gate.error");
-    passwordInput.select();
-  }
-});
 
 function loadVideo(video, shouldPlay = true) {
   if (!video.src) {

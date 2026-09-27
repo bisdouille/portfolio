@@ -4,8 +4,8 @@
   --white: #fffef9;
   --muted: #6d7068;
   --line: rgba(16, 17, 15, .16);
-  --acid: #b8ff38;
-  --acid-deep: #8fe800;
+  --acid: #5b8cff;
+  --acid-deep: #2563eb;
   --radius: 22px;
 }
 
@@ -167,7 +167,7 @@ html[lang="fr"] .tool-heading h2 { max-width: 790px; font-size: clamp(39px, 4.4v
 .noka-card.is-back-right > span { right: 13px; left: auto; }
 .noka-card:hover { filter: saturate(1.08); }
 
-.data-section { padding: 115px 0; background: #ddffa1; }
+.data-section { padding: 115px 0; background: #dce8ff; }
 .data-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); gap: clamp(50px, 8vw, 120px); align-items: end; }
 .data-section h2 { max-width: 720px; }
 .data-section h2 span { color: var(--ink); }

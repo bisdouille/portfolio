@@ -13,20 +13,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
-<body class="locked">
-  <div class="gate" id="gate">
-    <form class="gate__card" id="loginForm">
-      <div class="gate__mark" aria-hidden="true">AG</div>
-      <p class="gate__kicker">AMBROISE GONON</p>
-      <h1 data-i18n="gate.title">Selected work</h1>
-      <p class="gate__copy" data-i18n="gate.copy">This page is access-restricted.</p>
-      <label for="password" data-i18n="gate.password">Password</label>
-      <input id="password" type="password" autocomplete="current-password" data-i18n-placeholder="gate.placeholder" placeholder="Enter password" autofocus>
-      <button type="submit" data-i18n="gate.access">Access</button>
-      <p class="gate__error" id="error" role="alert"></p>
-    </form>
-  </div>
-
+<body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Ambroise Gonon — top">AMBROISE GONON</a>
     <div class="topbar__actions">
@@ -124,7 +111,7 @@
           <input id="balanceRange" type="range" min="0" max="100" value="50" step="1" aria-label="Balance virality and conversion">
           <span class="balance-label balance-label--conversion" data-i18n="balance.conversion">Conversion</span>
         </div>
-        <p class="balance-result" id="balanceResult" data-i18n-html="balance.result" aria-live="polite">I <small>(try)</small> to do both.</p>
+        <p class="balance-result" id="balanceResult" data-i18n-html="balance.result" aria-live="polite">I <small>(try to)</small> do both.</p>
       </div>
     </section>
 
