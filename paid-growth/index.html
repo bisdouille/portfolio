@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mirelo Growth Interview Cheat Sheet</title>
+<title>Mirelo — Growth Interview Cheat Sheet</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,100 +11,171 @@
 <style>
 :root{
   --bg:#f6f7f2;
-  --card:#fff;
-  --ink:#10110e;
-  --muted:#676c61;
-  --line:#dfe2d8;
+  --card:#ffffff;
+  --ink:#11130f;
+  --muted:#666b61;
+  --line:#dde1d6;
   --accent:#b9ff3f;
-  --accent2:#efffcf;
-  --dark:#11130e;
+  --accent-soft:#efffd1;
+  --dark:#11130f;
+  --warn:#fff7dc;
+  --warn-line:#e7d597;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;line-height:1.45}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65}
 body.locked{overflow:hidden}
 a{color:inherit}
 .progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);width:0;z-index:100}
-.shell{max-width:1220px;margin:0 auto;padding:78px 22px 60px}
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(246,247,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.topbar-inner{max-width:1220px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-weight:800;letter-spacing:-.02em;font-size:14px}
+
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(246,247,242,.94);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)
+}
+.topbar-inner{
+  max-width:1280px;margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;gap:16px
+}
+.brand{font-weight:800;font-size:13px;white-space:nowrap}
 .nav{display:flex;gap:8px;overflow:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nav a{text-decoration:none;white-space:nowrap;border:1px solid var(--line);background:#fff;padding:8px 10px;border-radius:999px;font-size:11px;color:var(--muted)}
-.nav a:hover{color:var(--ink);border-color:#bfc4b5}
-.hero{padding:54px 0 30px}
-.eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#667043;margin-bottom:12px}
-h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.035em;margin:0}
-h1{font-size:clamp(40px,6vw,70px);line-height:.96;max-width:900px}
-.hero p{font-size:17px;color:var(--muted);max-width:760px;margin:16px 0 0}
-.highlight{background:var(--accent);padding:0 .09em}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
-.quick .q{border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px}
-.q strong{display:block;font-size:23px;font-family:"Space Grotesk",Inter,sans-serif}
-.q span{font-size:11px;color:var(--muted)}
-.layout{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start}
-.side{position:sticky;top:78px;border:1px solid var(--line);background:#fff;border-radius:16px;padding:12px}
-.side a{display:block;text-decoration:none;padding:9px 10px;border-radius:10px;font-size:12px;color:var(--muted)}
-.side a:hover{background:var(--accent2);color:var(--ink)}
-.main{min-width:0}
-.section{scroll-margin-top:78px;padding:28px 0 12px;border-top:1px solid var(--line)}
-.section:first-child{border-top:0}
-.section h2{font-size:30px;margin-bottom:14px}
-.lead{font-size:14px;color:var(--muted);margin:-5px 0 18px;max-width:760px}
-.answer{border:1px solid var(--line);background:#fff;border-radius:16px;padding:18px;margin:11px 0}
-.answer .qtitle{font-size:11px;text-transform:uppercase;letter-spacing:.09em;font-weight:800;color:#6d7650;margin-bottom:9px}
-.answer p{margin:0;font-size:15px}
-.answer p + p{margin-top:10px}
-.short{background:var(--dark);color:#fff;border-color:var(--dark)}
-.short .qtitle{color:var(--accent)}
-.short p{font-size:18px;line-height:1.35}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{border:1px solid var(--line);background:#fff;border-radius:15px;padding:16px}
-.card h3{font-size:17px;margin-bottom:7px}
-.card p{margin:0;color:var(--muted);font-size:13px}
-.card strong{color:var(--ink)}
-.formula{font-family:"Space Grotesk",Inter,sans-serif;font-size:18px;background:var(--accent2);border:1px solid #d9f3a9;border-radius:12px;padding:13px 14px;margin-top:10px}
-.table{width:100%;border-collapse:separate;border-spacing:0 8px}
-.table td{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px;font-size:13px}
-.table td:first-child{border-left:1px solid var(--line);border-radius:12px 0 0 12px;font-weight:700;width:28%}
-.table td:last-child{border-right:1px solid var(--line);border-radius:0 12px 12px 0;color:var(--muted)}
-.badge{display:inline-block;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 9px;font-size:11px;margin:3px 3px 0 0}
-.warning{background:#fff8df;border-color:#eadba0}
-.good{background:#f0ffd9;border-color:#d6efaa}
-.red{background:#fff0ee;border-color:#f1c6bf}
-.questions{counter-reset:item}
-.question{counter-increment:item;border-bottom:1px solid var(--line);padding:14px 0;font-size:15px}
-.question::before{content:counter(item) ". ";font-weight:800;color:#6d7650}
-.rescue{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.rescue .card p{font-size:15px;color:var(--ink)}
-.footer{padding:34px 0 10px;color:var(--muted);font-size:11px}
+.nav a{
+  text-decoration:none;white-space:nowrap;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 11px;font-size:11px;color:var(--muted)
+}
+.nav a:hover{color:var(--ink);border-color:#b7bdad}
 
-/* gate */
-#gate{position:fixed;inset:0;z-index:1000;background:var(--bg);display:grid;place-items:center;padding:24px}
+.shell{max-width:1280px;margin:0 auto;padding:94px 24px 72px}
+.hero{padding:50px 0 46px}
+.eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#69734d;margin-bottom:14px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.035em;margin:0}
+h1{font-size:clamp(42px,6vw,72px);line-height:.98;max-width:980px}
+.hero p{max-width:760px;margin:20px 0 0;color:var(--muted);font-size:17px}
+.highlight{background:var(--accent);padding:0 .08em}
+
+.quick{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-top:34px
+}
+.quick .q{
+  border:1px solid var(--line);background:var(--card);border-radius:16px;padding:20px
+}
+.q strong{display:block;font:700 25px "Space Grotesk",Inter,sans-serif}
+.q span{display:block;margin-top:3px;font-size:11px;color:var(--muted)}
+
+.layout{display:grid;grid-template-columns:230px minmax(0,860px);gap:42px;align-items:start}
+.side{
+  position:sticky;top:86px;background:#fff;border:1px solid var(--line);
+  border-radius:18px;padding:12px
+}
+.side a{
+  display:block;text-decoration:none;color:var(--muted);font-size:12px;
+  padding:10px 11px;border-radius:10px
+}
+.side a:hover{background:var(--accent-soft);color:var(--ink)}
+
+.main{min-width:0}
+.section{
+  scroll-margin-top:90px;padding:46px 0;
+  border-top:1px solid var(--line)
+}
+.section:first-child{border-top:0;padding-top:0}
+.section h2{font-size:32px;line-height:1.1;margin-bottom:10px}
+.lead{max-width:720px;margin:0 0 24px;color:var(--muted);font-size:14px}
+
+.answer{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:24px 26px;margin:18px 0
+}
+.answer .qtitle{
+  font-size:11px;text-transform:uppercase;letter-spacing:.1em;
+  font-weight:800;color:#6b744f;margin-bottom:12px
+}
+.answer p{margin:0;font-size:16px;line-height:1.62}
+.answer p+p{margin-top:13px}
+.answer.dark{background:var(--dark);color:#fff;border-color:var(--dark)}
+.answer.dark .qtitle{color:var(--accent)}
+.answer.dark p{font-size:19px;line-height:1.5}
+.answer.good{background:var(--accent-soft);border-color:#d4eea3}
+.answer.warn{background:var(--warn);border-color:var(--warn-line)}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:20px
+}
+.card h3{font-size:18px;line-height:1.2;margin-bottom:9px}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.card strong{color:var(--ink)}
+
+.formula{
+  background:var(--accent-soft);border:1px solid #d4eea3;border-radius:14px;
+  padding:16px 18px;margin:18px 0;
+  font:600 18px/1.45 "Space Grotesk",Inter,sans-serif
+}
+
+.keylist{display:grid;gap:12px;margin:18px 0}
+.key{
+  display:grid;grid-template-columns:150px 1fr;gap:18px;
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px
+}
+.key strong{font-size:13px}
+.key span{font-size:14px;color:var(--muted)}
+
+.questions{counter-reset:item;margin-top:6px}
+.question{
+  counter-increment:item;padding:18px 0;border-bottom:1px solid var(--line);
+  font-size:16px;line-height:1.55
+}
+.question::before{content:counter(item) ". ";font-weight:800;color:#68734a}
+
+.rescue{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rescue .card p{font-size:15px;color:var(--ink)}
+
+.mini{font-size:12px;color:var(--muted);margin-top:10px}
+.footer{padding:34px 0 0;color:var(--muted);font-size:11px}
+
+/* Gate */
+#gate{
+  position:fixed;inset:0;z-index:1000;background:var(--bg);
+  display:grid;place-items:center;padding:24px
+}
 .gate-card{width:100%;max-width:360px}
-.gate-mark{width:42px;height:42px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-family:"Space Grotesk";font-weight:800;margin-bottom:20px}
+.gate-mark{
+  width:42px;height:42px;border-radius:10px;background:var(--accent);
+  display:grid;place-items:center;font-family:"Space Grotesk";font-weight:800;margin-bottom:20px
+}
 .gate-card h2{font-size:28px;margin-bottom:7px}
 .gate-card p{margin:0 0 16px;color:var(--muted);font-size:13px}
-.gate-card input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit;outline:none}
-.gate-card input:focus{border-color:#9aa18f}
-.gate-card button{width:100%;margin-top:9px;padding:12px;border:0;border-radius:10px;background:var(--dark);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.gate-card input{
+  width:100%;padding:12px 13px;border:1px solid var(--line);
+  border-radius:10px;background:#fff;font:inherit;outline:none
+}
+.gate-card input:focus{border-color:#9ba28f}
+.gate-card button{
+  width:100%;margin-top:9px;padding:12px;border:0;border-radius:10px;
+  background:var(--dark);color:#fff;font:inherit;font-weight:700;cursor:pointer
+}
 .error{height:18px;margin-top:7px;color:#b42318;font-size:11px}
 
-@media(max-width:900px){
- .layout{grid-template-columns:1fr}
- .side{display:none}
- .quick{grid-template-columns:repeat(2,1fr)}
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .side{display:none}
 }
-@media(max-width:620px){
- .shell{padding-left:16px;padding-right:16px}
- .topbar-inner{padding-left:16px;padding-right:16px}
- .brand{display:none}
- .nav{width:100%}
- .cards,.rescue{grid-template-columns:1fr}
- h1{font-size:42px}
- .hero{padding-top:38px}
- .table td:first-child{width:38%}
+@media(max-width:700px){
+  .shell{padding-left:16px;padding-right:16px;padding-top:84px}
+  .topbar-inner{padding-left:16px;padding-right:16px}
+  .brand{display:none}
+  .nav{width:100%}
+  .hero{padding-top:34px;padding-bottom:34px}
+  h1{font-size:43px}
+  .quick{grid-template-columns:repeat(2,1fr)}
+  .cards,.rescue{grid-template-columns:1fr}
+  .section{padding:36px 0}
+  .answer{padding:20px}
+  .answer.dark p{font-size:17px}
+  .key{grid-template-columns:1fr;gap:5px}
 }
 </style>
 </head>
@@ -125,28 +196,30 @@ h1{font-size:clamp(40px,6vw,70px);line-height:.96;max-width:900px}
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brand">Mirelo · Growth interview</div>
-    <div class="nav">
+    <nav class="nav">
       <a href="#pitch">Pitch</a>
+      <a href="#ketty-lens">Ketty lens</a>
       <a href="#first-tests">First tests</a>
-      <a href="#testing">Testing</a>
       <a href="#metrics">Metrics</a>
       <a href="#creative">Creative</a>
-      <a href="#scale">Scaling</a>
-      <a href="#gaps">Pushback</a>
-      <a href="#questions">Ask Ketty</a>
-      <a href="#rescue">Rescue lines</a>
-    </div>
+      <a href="#distribution">Distribution</a>
+      <a href="#examples">Examples</a>
+      <a href="#pushback">Pushback</a>
+      <a href="#questions">Questions</a>
+      <a href="#rescue">Rescue</a>
+    </nav>
   </div>
 </div>
 
 <div class="shell">
   <section class="hero">
-    <div class="eyebrow">Second interview · growth deep dive</div>
-    <h1>Stay simple. Think <span class="highlight">growth</span>, not just media buying.</h1>
-    <p>Ketty may push on activation, retention, economics, creative velocity and whether you can build a learning system from scratch. Short answers first. Go deeper only when she asks.</p>
+    <div class="eyebrow">Mirelo · interview with Ketty · growth deep dive</div>
+    <h1>Short answers. Simple English. <span class="highlight">Think growth.</span></h1>
+    <p>Your goal is not to sound academic. Show that you understand paid, product quality, creative, retention and distribution — and that you can build a system that keeps learning.</p>
+
     <div class="quick">
       <div class="q"><strong>$110K</strong><span>weekly UA spend · Homa</span></div>
-      <div class="q"><strong>10</strong><span>live games · Rivrs</span></div>
+      <div class="q"><strong>10</strong><span>games · Rivrs</span></div>
       <div class="q"><strong>50+</strong><span>active creators</span></div>
       <div class="q"><strong>50+</strong><span>videos / week</span></div>
     </div>
@@ -155,16 +228,16 @@ h1{font-size:clamp(40px,6vw,70px);line-height:.96;max-width:900px}
   <div class="layout">
     <aside class="side">
       <a href="#pitch">1. Core pitch</a>
-      <a href="#first-tests">2. What I test first</a>
-      <a href="#testing">3. Test structure</a>
-      <a href="#metrics">4. Growth metrics</a>
-      <a href="#creative">5. Creative</a>
-      <a href="#scale">6. Scaling</a>
-      <a href="#measurement">7. Measurement</a>
-      <a href="#examples">8. My examples</a>
-      <a href="#gaps">9. Pushback / gaps</a>
-      <a href="#ketty">10. Likely challenges</a>
-      <a href="#questions">11. Questions for Ketty</a>
+      <a href="#ketty-lens">2. Ketty's growth lens</a>
+      <a href="#first-tests">3. What I test first</a>
+      <a href="#testing">4. How I test</a>
+      <a href="#metrics">5. Metrics</a>
+      <a href="#creative">6. Creative</a>
+      <a href="#distribution">7. Distribution & scale</a>
+      <a href="#measurement">8. Measurement</a>
+      <a href="#examples">9. My proof</a>
+      <a href="#pushback">10. Pushback</a>
+      <a href="#questions">11. Ask Ketty</a>
       <a href="#rescue">12. Rescue lines</a>
     </aside>
 
@@ -172,206 +245,266 @@ h1{font-size:clamp(40px,6vw,70px);line-height:.96;max-width:900px}
 
       <section class="section" id="pitch">
         <h2>1. Core pitch</h2>
-        <div class="answer short">
-          <div class="qtitle">30-second version</div>
-          <p>At Homa, I learned rigorous paid acquisition at scale: large budgets, attribution, ROAS, LTV and creative testing.</p>
-          <p>At Rivrs, I moved further upstream. I now build the acquisition and creative systems themselves: creators, production, international launches, testing velocity and team processes.</p>
-          <p>Mirelo is interesting to me because it combines both.</p>
+        <p class="lead">This is the story she should remember.</p>
+
+        <div class="answer dark">
+          <div class="qtitle">30-second answer</div>
+          <p>At Homa, I learned paid acquisition at scale: large budgets, attribution, ROAS, LTV and creative testing.</p>
+          <p>At Rivrs, I moved closer to the creative and growth system itself: creators, content production, new markets, testing speed and team processes.</p>
+          <p>Mirelo is interesting to me because it needs both.</p>
         </div>
-        <div class="formula">Homa = paid rigor → Rivrs = creative systems → Mirelo = both</div>
+
+        <div class="formula">Homa = paid rigor → Rivrs = creative speed → Mirelo = both</div>
+      </section>
+
+      <section class="section" id="ketty-lens">
+        <h2>2. Ketty's growth lens</h2>
+        <p class="lead">These are the ideas you should be ready to discuss. Do not force them into every answer.</p>
+
+        <div class="answer good">
+          <div class="qtitle">Hype is not product-market fit</div>
+          <p>A lot of attention, clicks or signups does not mean users will stay.</p>
+          <p>For Mirelo, I would care about repeat use and retention, not only cheap acquisition.</p>
+        </div>
+
+        <div class="answer good">
+          <div class="qtitle">Distribution is bigger than paid ads</div>
+          <p>Paid is one channel. Distribution can also come from creators, organic content, sharing, communities and product loops.</p>
+          <p>I would use paid to learn fast and scale what works — not as the only growth engine.</p>
+        </div>
+
+        <div class="answer good">
+          <div class="qtitle">Do not depend on one “winner” forever</div>
+          <p>A channel, audience or creative can stop working.</p>
+          <p>The real advantage is a system that keeps finding new messages, new creatives and new ways to distribute the product.</p>
+        </div>
+
+        <div class="formula">Attention ≠ retention · Paid = learn + scale · Distribution should compound</div>
       </section>
 
       <section class="section" id="first-tests">
-        <h2>2. “What would you test first?”</h2>
-        <div class="answer short">
-          <div class="qtitle">Say this first</div>
-          <p>I’d test who we target, what message we use, and how we demonstrate the product. Then I’d look at which combination brings the best activated users — not just the cheapest clicks.</p>
+        <h2>3. “What would you test first?”</h2>
+        <p class="lead">Start broad. Do not pretend you know the answer before seeing Mirelo's data.</p>
+
+        <div class="answer dark">
+          <div class="qtitle">Main answer</div>
+          <p>I’d start with three things: who we target, what message we use, and how we show the product.</p>
+          <p>Then I’d look at which combination brings the best activated users — not just the cheapest clicks.</p>
         </div>
+
         <div class="cards">
-          <div class="card"><h3>Audience</h3><p>Who has the strongest pain and existing workflow?</p></div>
-          <div class="card"><h3>Message</h3><p>Speed? Quality? Control? Better storytelling?</p></div>
-          <div class="card"><h3>Creative</h3><p>Before / after, workflow demo, creator-led, use-case specific.</p></div>
-          <div class="card"><h3>Quality</h3><p>Judge on activation and downstream behaviour, not only CTR or signup CAC.</p></div>
+          <div class="card"><h3>Audience</h3><p>Who has a real need and already creates video often?</p></div>
+          <div class="card"><h3>Message</h3><p>What matters most: speed, quality, control, or better storytelling?</p></div>
+          <div class="card"><h3>Creative</h3><p>Before / after. Product demo. Creator-led. One clear use case.</p></div>
+          <div class="card"><h3>User quality</h3><p>Do they activate, come back and pay?</p></div>
         </div>
-        <div class="answer good">
-          <div class="qtitle">If she asks for segments</div>
-          <p>My first hypotheses would be video creators, professional editors / filmmakers, and potentially gaming creators. But I’d look at existing user data before deciding where to put most of the budget.</p>
+
+        <div class="answer">
+          <div class="qtitle">If she asks for audience ideas</div>
+          <p>My first hypotheses would be video creators, professional editors or filmmakers, and maybe gaming creators.</p>
+          <p>But I would first look at the current user data before choosing where to spend most of the budget.</p>
         </div>
       </section>
 
       <section class="section" id="testing">
-        <h2>3. “How do you structure a test?”</h2>
-        <div class="answer short">
-          <div class="qtitle">Keep it simple</div>
-          <p>One clear question, one main variable, one success metric. Then I document what happened, what we learned, and what we should test next.</p>
+        <h2>4. “How do you structure a test?”</h2>
+        <div class="answer dark">
+          <div class="qtitle">Simple answer</div>
+          <p>One clear question. One main variable. One success metric.</p>
+          <p>Then I write down what we learned and what we should test next.</p>
         </div>
+
+        <div class="formula">Question → Test → Result → Learning → Next test</div>
+
         <div class="answer">
-          <div class="qtitle">If she pushes deeper</div>
-          <p>For a bigger decision, I also want enough volume and consistency before scaling. And I try to distinguish a real learning from noise.</p>
+          <div class="qtitle">If she pushes</div>
+          <p>For an important decision, I also want enough volume and a result that is consistent before I scale it.</p>
         </div>
-        <div class="formula">Hypothesis → Test → Measure → Learn → Next test</div>
       </section>
 
       <section class="section" id="metrics">
-        <h2>4. Growth metrics to master</h2>
-        <table class="table">
-          <tr><td>CAC</td><td>Meaningless alone. Connect it to activation, retention, revenue and payback.</td></tr>
-          <tr><td>Activation</td><td>The early behaviour that best predicts future retention or value.</td></tr>
-          <tr><td>Retention</td><td>Do acquired users keep coming back and experiencing value?</td></tr>
-          <tr><td>LTV</td><td>Expected value generated by a user over time.</td></tr>
-          <tr><td>Payback</td><td>How long it takes to recover acquisition spend.</td></tr>
-          <tr><td>Marginal CAC</td><td>What the next unit of spend costs — critical when scaling.</td></tr>
-          <tr><td>Incrementality</td><td>Did paid create the outcome, or capture something that would have happened anyway?</td></tr>
-          <tr><td>Attribution</td><td>Useful, imperfect. Combine platform signals with first-party product data.</td></tr>
-        </table>
-        <div class="answer short">
+        <h2>5. Metrics to master</h2>
+        <p class="lead">You only need simple definitions and the link between them.</p>
+
+        <div class="keylist">
+          <div class="key"><strong>CAC</strong><span>How much it costs to acquire a customer. It means little without LTV and payback.</span></div>
+          <div class="key"><strong>Activation</strong><span>The first action that shows the user has reached real product value.</span></div>
+          <div class="key"><strong>Retention</strong><span>Do users come back and keep using the product?</span></div>
+          <div class="key"><strong>LTV</strong><span>How much value or revenue a customer creates over time.</span></div>
+          <div class="key"><strong>Payback</strong><span>How long it takes to earn back the acquisition cost.</span></div>
+          <div class="key"><strong>Marginal CAC</strong><span>What the next part of your budget costs when you scale.</span></div>
+          <div class="key"><strong>Incrementality</strong><span>Did paid really create the conversion, or would it have happened anyway?</span></div>
+          <div class="key"><strong>Attribution</strong><span>Useful, but never perfect. Use platform data and product data together.</span></div>
+        </div>
+
+        <div class="answer dark">
           <div class="qtitle">“What is a good CAC?”</div>
-          <p>There is no good CAC without understanding LTV and payback. I’d start from the economics we want and work backwards.</p>
+          <p>There is no good CAC on its own.</p>
+          <p>I need to understand LTV and payback first, then work backwards.</p>
         </div>
       </section>
 
       <section class="section" id="creative">
-        <h2>5. Creative</h2>
-        <div class="answer short">
-          <div class="qtitle">“How do you evaluate a creative?”</div>
-          <p>First: does it stop attention? Then: does it create intent? And finally: does that traffic convert and activate? A strong CTR with poor activation is not a winner.</p>
+        <h2>6. Creative</h2>
+        <p class="lead">This is one of your strongest areas. Keep it connected to business outcomes.</p>
+
+        <div class="answer dark">
+          <div class="qtitle">“How do you judge a creative?”</div>
+          <p>First: does it get attention?</p>
+          <p>Second: does it create intent?</p>
+          <p>Third: do those users actually activate and come back?</p>
+          <p>A high CTR with bad activation is not a winner.</p>
         </div>
+
         <div class="cards">
-          <div class="card"><h3>Hook</h3><p>Does it earn the next few seconds?</p></div>
-          <div class="card"><h3>Intent</h3><p>CTR / landing behaviour / product interest.</p></div>
+          <div class="card"><h3>Hook</h3><p>Does it make people stop?</p></div>
+          <div class="card"><h3>Intent</h3><p>CTR, landing behaviour, interest.</p></div>
           <div class="card"><h3>Conversion</h3><p>Signup or purchase efficiency.</p></div>
-          <div class="card"><h3>User quality</h3><p>Activation, repeat usage, retention.</p></div>
+          <div class="card"><h3>Quality</h3><p>Activation, repeat use, retention.</p></div>
         </div>
+
         <div class="answer good">
-          <div class="qtitle">Key line</div>
+          <div class="qtitle">Your strongest line</div>
           <p><strong>I know paid acquisition, but I also know how to build the creative supply behind it.</strong></p>
         </div>
       </section>
 
-      <section class="section" id="scale">
-        <h2>6. “How would you scale?”</h2>
-        <div class="answer short">
-          <div class="qtitle">Main answer</div>
-          <p>I’d scale after we find a repeatable audience, message and creative combination that produces good users. Then I’d increase spend progressively while watching marginal CAC and user quality.</p>
+      <section class="section" id="distribution">
+        <h2>7. Distribution & scaling</h2>
+        <p class="lead">This is where you can connect your Rivrs experience to Ketty's way of thinking.</p>
+
+        <div class="answer dark">
+          <div class="qtitle">“How would you scale?”</div>
+          <p>I would first find a repeatable combination of audience, message and creative that brings good users.</p>
+          <p>Then I would increase spend step by step, while watching marginal CAC and user quality.</p>
         </div>
-        <div class="formula">Scaling budget and scaling creative production have to happen together.</div>
+
+        <div class="formula">Scaling budget and scaling creative have to happen together.</div>
+
+        <div class="answer good">
+          <div class="qtitle">Paid + distribution</div>
+          <p>I see paid as both a learning channel and a scaling channel.</p>
+          <p>But I would also look for distribution we can build over time: creators, organic content and product sharing.</p>
+        </div>
+
         <div class="answer">
-          <div class="qtitle">Channel expansion</div>
-          <p>I prefer learning deeply on a small number of channels first, then expanding once we understand what is working and why.</p>
+          <div class="qtitle">Strong Mirelo thought</div>
+          <p>Mirelo is easy to demonstrate. You can show the value in a few seconds with a before / after video.</p>
+          <p>That means the creative can also become part of the distribution.</p>
         </div>
       </section>
 
       <section class="section" id="measurement">
-        <h2>7. Measurement</h2>
+        <h2>8. Measurement</h2>
+
         <div class="formula">Ad → Signup → Activation → Repeat use → Paid conversion → Retention</div>
-        <div class="answer short">
+
+        <div class="answer dark">
           <div class="qtitle">“What is activation for Mirelo?”</div>
-          <p>I have a hypothesis, but I wouldn’t define it before looking at the data. I’d identify which early behaviour best predicts retention or conversion.</p>
+          <p>I have a hypothesis, but I would not define it before seeing the data.</p>
+          <p>I would find the early action that best predicts retention or paid conversion.</p>
         </div>
+
         <div class="answer">
-          <div class="qtitle">Tracking credibility</div>
-          <p>I’m comfortable working on the tracking setup, even if I’m not a data engineer. I’ve worked with GTM, GA4, Meta / TikTok pixels, PostHog, Adjust, Singular and Tableau.</p>
+          <div class="qtitle">Tracking</div>
+          <p>I’m comfortable working on the tracking setup, even if I’m not a data engineer.</p>
+          <p>I’ve worked with GTM, GA4, Meta and TikTok pixels, PostHog, Adjust, Singular and Tableau.</p>
         </div>
       </section>
 
       <section class="section" id="examples">
-        <h2>8. Your strongest examples</h2>
+        <h2>9. Your proof</h2>
+        <p class="lead">Use one example at a time. Do not list everything unless she asks.</p>
+
         <div class="cards">
           <div class="card">
-            <h3>Homa</h3>
-            <p><strong>$110K weekly spend.</strong> Meta, TikTok, Google UAC, AppLovin, Unity, IronSource. Attribution, ROAS, LTV, creative testing.</p>
+            <h3>Homa = paid rigor</h3>
+            <p><strong>$110K weekly spend.</strong> Meta, TikTok, Google UAC, AppLovin, Unity, IronSource. ROAS, LTV, attribution, creative testing.</p>
           </div>
+
           <div class="card">
-            <h3>Rivrs</h3>
-            <p><strong>10 games · team of 7.</strong> 50+ creators, 20+ content accounts, 50+ videos/week, 5 languages, PL/DE/BR launches.</p>
+            <h3>Rivrs = creative system</h3>
+            <p><strong>10 games · team of 7.</strong> 50+ creators, 20+ content accounts, 50+ videos/week, 5 languages, new-market launches.</p>
           </div>
+
           <div class="card">
-            <h3>Noka</h3>
-            <p>Consumer / DTC proof. Paid acquisition + direct-response creative production. Meta average ROAS 5–6x.</p>
+            <h3>Noka = direct response</h3>
+            <p>Paid acquisition and creative production for e-commerce. Meta average ROAS around 5–6x.</p>
           </div>
+
           <div class="card">
-            <h3>Builder mindset</h3>
-            <p>When production became a bottleneck, I built systems and automation to increase testing velocity instead of just adding headcount.</p>
+            <h3>Bisdouille = my own experiment</h3>
+            <p>I built my own TikTok performance project to 80K followers and 90K comments, then turned it into a community.</p>
           </div>
         </div>
-        <div class="answer short">
+
+        <div class="answer dark">
           <div class="qtitle">Best Rivrs story</div>
-          <p>Creative production was becoming the bottleneck. We built repeatable formats, creator workflows and automation. Today we produce 50+ videos per week across multiple accounts and languages. The point is not volume — it is learning faster.</p>
+          <p>Creative production became the bottleneck.</p>
+          <p>So we built repeatable formats, creator workflows and automation.</p>
+          <p>Today we can produce 50+ videos per week. The goal is not volume for volume’s sake — it is to learn faster.</p>
         </div>
       </section>
 
-      <section class="section" id="gaps">
-        <h2>9. Pushback / gaps</h2>
-        <div class="answer warning">
+      <section class="section" id="pushback">
+        <h2>10. Pushback</h2>
+
+        <div class="answer warn">
           <div class="qtitle">“You come from gaming, not SaaS.”</div>
-          <p>That’s the biggest difference in my background. But the paid fundamentals are very transferable: acquisition economics, attribution, creative testing, segmentation and retention. The part I’d need to learn quickly is Mirelo’s specific user behaviour and subscription economics.</p>
+          <p>That is the biggest difference in my background.</p>
+          <p>But the core skills transfer well: acquisition economics, creative testing, attribution, segmentation and retention.</p>
+          <p>What I need to learn fast is Mirelo’s specific user behaviour and subscription model.</p>
         </div>
-        <div class="answer warning">
-          <div class="qtitle">“Do you know SQL?”</div>
-          <p>I’m functional, but I wouldn’t position myself as an expert. I’m comfortable working with product and analytics data and getting to the answer I need.</p>
-        </div>
-        <div class="answer warning">
-          <div class="qtitle">“Are you still hands-on?”</div>
-          <p>Yes. I manage a team, but I still work directly on campaign strategy, creative concepts, analytics and testing. I like defining the system and still being able to go into the account or the data myself.</p>
-        </div>
-        <div class="answer red">
-          <div class="qtitle">Do not overclaim</div>
-          <p>Do not pretend gaming retention = creative SaaS retention. Do not call yourself an SQL expert. Do not say you personally acquired all 1.5M Rivrs users.</p>
-        </div>
-      </section>
 
-      <section class="section" id="ketty">
-        <h2>10. What Ketty may challenge</h2>
-        <div class="cards">
-          <div class="card"><h3>Activation</h3><p>What behaviour actually predicts long-term value?</p></div>
-          <div class="card"><h3>Retention</h3><p>Are you acquiring curiosity or people who build a workflow?</p></div>
-          <div class="card"><h3>Economics</h3><p>CAC, LTV, payback, marginal CAC.</p></div>
-          <div class="card"><h3>Incrementality</h3><p>How do you know paid caused the result?</p></div>
-          <div class="card"><h3>Creative fatigue</h3><p>What happens when spend grows faster than fresh concepts?</p></div>
-          <div class="card"><h3>PMF vs paid</h3><p>Paid can amplify product value; it cannot manufacture retention.</p></div>
+        <div class="answer warn">
+          <div class="qtitle">“Do you know SQL?”</div>
+          <p>I can work with data and get to the answer I need, but I would not call myself an SQL expert.</p>
         </div>
-        <div class="answer good">
-          <div class="qtitle">Strong Mirelo insight</div>
-          <p>One risk is acquiring curiosity instead of real users. AI demos can drive cheap clicks and signups, but a one-time wow moment is different from becoming part of someone’s workflow.</p>
+
+        <div class="answer warn">
+          <div class="qtitle">“Are you still hands-on?”</div>
+          <p>Yes. I manage a team, but I still work directly on campaign strategy, creative ideas, analytics and testing.</p>
         </div>
-        <div class="answer good">
-          <div class="qtitle">Strong Mirelo opportunity</div>
-          <p>Mirelo is highly demonstrable. A silent video versus the generated result can communicate value in seconds, so the creative itself can become a strong distribution mechanism.</p>
+
+        <div class="answer warn">
+          <div class="qtitle">“What is the risk with paid for an AI product?”</div>
+          <p>Acquiring curiosity instead of real users.</p>
+          <p>A great AI demo can create a lot of clicks, but that is not the same as building a habit or a workflow.</p>
         </div>
       </section>
 
       <section class="section" id="questions">
         <h2>11. Questions to ask Ketty</h2>
         <div class="questions">
-          <div class="question">From what you’ve seen so far, where is the biggest growth uncertainty at Mirelo today: audience, positioning, activation or distribution?</div>
+          <div class="question">From what you have seen so far, what is the biggest growth question at Mirelo today: audience, positioning, activation or distribution?</div>
           <div class="question">What would you want the person in this role to prove in the first three months?</div>
-          <div class="question">Where do you think paid should sit in Mirelo’s growth engine — mainly as a scaling channel, a learning channel, or both?</div>
-          <div class="question">What have you seen in the current data that surprised you most?</div>
+          <div class="question">Do you see paid mainly as a scaling channel, a learning channel, or both?</div>
+          <div class="question">What have you seen in Mirelo’s current data that surprised you most?</div>
         </div>
       </section>
 
       <section class="section" id="rescue">
         <h2>12. Rescue lines</h2>
+        <p class="lead">Use these. A short pause is better than a complicated answer.</p>
+
         <div class="rescue">
-          <div class="card"><p><strong>Need time:</strong><br>“Let me think about that for a second.”</p></div>
-          <div class="card"><p><strong>Not sure:</strong><br>“My first hypothesis would be…”</p></div>
-          <div class="card"><p><strong>Clarify:</strong><br>“Just to make sure I understood correctly, are you asking about…?”</p></div>
-          <div class="card"><p><strong>Too complex:</strong><br>“Maybe the simplest way to explain it is…”</p></div>
-          <div class="card"><p><strong>She challenges you:</strong><br>“Yes, that’s fair. I’d probably refine what I said.”</p></div>
-          <div class="card"><p><strong>You genuinely don’t know:</strong><br>“I haven’t worked deeply on that specific topic, so I don’t want to pretend I have. What I would do is…”</p></div>
+          <div class="card"><p><strong>Need time</strong><br>“Let me think about that for a second.”</p></div>
+          <div class="card"><p><strong>Not sure</strong><br>“My first hypothesis would be…”</p></div>
+          <div class="card"><p><strong>Clarify</strong><br>“Just to make sure I understood, are you asking about…?”</p></div>
+          <div class="card"><p><strong>Make it simpler</strong><br>“Maybe the simplest way to explain it is…”</p></div>
+          <div class="card"><p><strong>She challenges you</strong><br>“Yes, that’s fair. I would refine what I said.”</p></div>
+          <div class="card"><p><strong>You do not know</strong><br>“I haven’t worked deeply on that topic, so I don’t want to pretend. What I would do is…”</p></div>
         </div>
       </section>
 
       <section class="section">
-        <h2>Final reminder</h2>
-        <div class="answer short">
+        <h2>Final 20-second reminder</h2>
+        <div class="answer dark">
           <div class="qtitle">Your positioning</div>
-          <p>Paid rigor. Creative velocity. Builder mindset.</p>
+          <p>Paid rigor. Creative speed. Builder mindset.</p>
+          <p>I do not only buy traffic. I build systems that help us learn what works, create more of it, and scale it.</p>
         </div>
-        <div class="answer">
-          <div class="qtitle">Speak like this</div>
-          <p>Short sentences. Start with the answer. Pause. Add detail only if she asks. You do not need perfect English to sound senior.</p>
-        </div>
+        <p class="mini">Speak slowly. Start with the answer. Stop. Add detail only if she asks.</p>
       </section>
 
     </main>
@@ -388,29 +521,34 @@ const input=document.getElementById('password');
 const error=document.getElementById('error');
 
 async function sha256(v){
- const d=new TextEncoder().encode(v);
- const h=await crypto.subtle.digest('SHA-256',d);
- return Array.from(new Uint8Array(h)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  const d=new TextEncoder().encode(v);
+  const h=await crypto.subtle.digest('SHA-256',d);
+  return Array.from(new Uint8Array(h)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
 function unlock(){
- sessionStorage.setItem('mireloCheat','1');
- gate.style.display='none';
- document.body.classList.remove('locked');
+  sessionStorage.setItem('mireloCheat','1');
+  gate.style.display='none';
+  document.body.classList.remove('locked');
 }
 if(sessionStorage.getItem('mireloCheat')==='1') unlock();
+
 form.addEventListener('submit',async e=>{
- e.preventDefault();
- error.textContent='';
- if(await sha256(input.value)===HASH) unlock();
- else{error.textContent='Incorrect password';input.select();}
+  e.preventDefault();
+  error.textContent='';
+  if(await sha256(input.value)===HASH) unlock();
+  else{
+    error.textContent='Incorrect password';
+    input.select();
+  }
 });
 
 const progress=document.getElementById('progress');
 function onScroll(){
- const max=document.documentElement.scrollHeight-innerHeight;
- progress.style.width=(max>0?(scrollY/max)*100:0)+'%';
+  const max=document.documentElement.scrollHeight-innerHeight;
+  progress.style.width=(max>0?(scrollY/max)*100:0)+'%';
 }
-addEventListener('scroll',onScroll,{passive:true});onScroll();
+addEventListener('scroll',onScroll,{passive:true});
+onScroll();
 </script>
 </body>
 </html>
