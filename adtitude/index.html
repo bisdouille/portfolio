@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Creative strategy, paid social et systèmes de production par Ambroise Gonon.">
+  <meta name="color-scheme" content="light">
+  <title>Creative Strategy — Ambroise Gonon</title>
+  <link rel="icon" href="../photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#101114;--paper:#f7f5ef;--white:#fffefa;--muted:#626660;--line:rgba(16,17,20,.15);
+      --blue:#2864ff;--coral:#ff654a;--yellow:#ffd84d;--lavender:#dcd6ff;--sky:#dfeaff;--radius:24px;
+    }
+    *{box-sizing:border-box}html{overflow-x:clip;scroll-behavior:smooth;background:var(--paper)}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:Inter,Arial,sans-serif;line-height:1.4}a{color:inherit}button,input{font:inherit;color:inherit}.shell{width:min(1240px,calc(100% - 56px));margin-inline:auto}.eyebrow{margin:0 0 18px;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.display{margin:0;font-family:"Archivo Black",Impact,sans-serif;font-weight:400;letter-spacing:-.065em;line-height:.9;text-transform:uppercase}.blue{color:var(--blue)}.coral{color:var(--coral)}.muted{color:var(--muted)}::selection{color:var(--ink);background:var(--yellow)}:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+
+    .topbar{position:fixed;z-index:100;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:17px 27px;background:rgba(247,245,239,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.brand{font-size:11px;font-weight:800;letter-spacing:.13em;text-decoration:none}.nav{display:flex;align-items:center;gap:8px}.nav a{padding:8px 11px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}.nav a:last-child{color:#fff;background:var(--ink)}
+
+    .hero{display:grid;align-content:center;min-height:100svh;padding:132px 0 70px}.hero .eyebrow{color:var(--blue)}.hero h1{max-width:1110px;font-size:clamp(52px,7.6vw,110px)}.hero h1 .line{display:block}.hero h1 .scribble{position:relative;display:inline-block;color:var(--blue);font-size:.84em}.hero h1 .scribble::after{content:"";position:absolute;z-index:-1;right:-.03em;bottom:.02em;left:-.02em;height:.18em;background:var(--yellow);transform:rotate(-1deg)}.hero-bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:90px;align-items:end;margin-top:44px}.hero-copy{max-width:710px;margin:0;color:var(--muted);font-size:clamp(17px,1.7vw,22px);font-weight:600;letter-spacing:-.025em}.hero-note{justify-self:end;max-width:330px;margin:0;padding:20px 22px;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:6px 7px 0 var(--blue);font-size:13px;font-weight:700;transform:rotate(1.2deg)}
+
+    .story{padding:120px 0}.story-title{max-width:1000px;font-size:clamp(48px,7vw,94px)}.word-reveal .word{display:inline-block;opacity:.12;transform:translateY(.22em);transition:opacity .45s ease,transform .45s ease}.word-reveal.is-visible .word{opacity:1;transform:none}.word-reveal.is-visible .word:nth-child(2n){transition-delay:.06s}.word-reveal.is-visible .word:nth-child(3n){transition-delay:.12s}.word-reveal.is-visible .word:nth-child(5n){transition-delay:.18s}
+
+    .data-story{color:#fff;background:var(--ink)}.data-layout{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}.data-copy h2{font-size:clamp(52px,7vw,96px)}.data-copy h2 span{color:var(--yellow)}.data-copy>p{max-width:610px;margin:28px 0 0;color:#c4c7c1;font-size:18px}.data-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}.data-chips span{padding:8px 11px;border:1px solid rgba(255,255,255,.23);border-radius:999px;color:#f2f3ef;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .eater{position:relative;min-height:470px;overflow:hidden;background:var(--blue);border-radius:var(--radius);box-shadow:18px 20px 0 var(--yellow)}.eater::after{content:"";position:absolute;right:-15%;bottom:-28%;width:70%;aspect-ratio:1;background:var(--coral);border-radius:50%}.eater-person{position:absolute;z-index:3;bottom:0;left:8%;width:44%;height:76%}.eater-head{position:absolute;top:0;left:12%;width:175px;aspect-ratio:1;background:var(--ink);border-radius:50%}.eater-head::after{content:"";position:absolute;top:43%;right:-2px;width:54px;height:48px;background:var(--blue);clip-path:polygon(0 0,100% 50%,0 100%)}.eater-body{position:absolute;bottom:-15%;left:0;width:250px;height:260px;background:var(--ink);border-radius:48% 48% 0 0}.food-stream{position:absolute;z-index:5;top:42%;right:4%;left:46%;height:90px}.food-stream span{position:absolute;right:-80px;padding:7px 9px;color:var(--ink);background:var(--yellow);border-radius:7px;font-size:10px;font-weight:900;animation:eat 4.8s linear infinite}.food-stream span:nth-child(2){top:37px;background:#fff;animation-delay:-1.1s}.food-stream span:nth-child(3){top:-32px;background:var(--coral);animation-delay:-2.2s}.food-stream span:nth-child(4){top:55px;background:var(--lavender);animation-delay:-3.4s}.food-stream span:nth-child(5){top:-8px;background:#fff;animation-delay:-4.2s}@keyframes eat{0%{right:-100px;opacity:0;transform:rotate(8deg) scale(.8)}12%{opacity:1}88%{opacity:1}100%{right:100%;opacity:0;transform:rotate(-8deg) scale(.65)}}
+
+    .spark{background:var(--white)}.spark-intro{display:grid;grid-template-columns:1fr .8fr;gap:90px;align-items:end}.spark h2{font-size:clamp(48px,6.8vw,90px)}.spark-copy{margin:0;color:var(--muted);font-size:18px}.quote-card{position:relative;max-width:880px;margin:90px auto 0;padding:48px 54px;background:var(--yellow);border:2px solid var(--ink);border-radius:20px;box-shadow:14px 16px 0 var(--coral);transform:rotate(-1deg)}.quote-card::before{content:"“";position:absolute;top:-43px;left:25px;color:var(--blue);font-family:Georgia,serif;font-size:110px;line-height:1}.quote-card blockquote{margin:0;font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(30px,4.6vw,62px);letter-spacing:-.055em;line-height:1;text-transform:uppercase}.quote-card cite{display:block;margin-top:24px;font-size:12px;font-style:normal;font-weight:800}.quote-answer{max-width:680px;margin:40px auto 0;text-align:center;color:var(--muted);font-size:16px}.quote-answer strong{color:var(--ink)}
+
+    .balance{padding:118px 0;background:var(--sky);overflow:hidden}.balance-layout{display:flex;flex-direction:column;align-items:center;text-align:center}.balance h2{font-size:clamp(43px,6vw,78px)}.balance-scale{--viral-shift:0px;--conversion-shift:0px;--viral-y:0px;--conversion-y:0px;--viral-rotate:0deg;--conversion-rotate:0deg;--amp-shift:0px;--amp-opacity:0;position:relative;width:clamp(310px,36vw,520px);margin-top:92px}.balance-label{position:absolute;top:50%;z-index:2;font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(16px,1.6vw,22px);letter-spacing:-.035em;text-transform:uppercase;white-space:nowrap;pointer-events:none;transition:transform .5s cubic-bezier(.16,.82,.22,1)}.balance-label--viral{left:0;transform:translate(calc(-100% - 30px + var(--viral-shift)),calc(-50% + var(--viral-y))) rotate(var(--viral-rotate))}.balance-label--conversion{right:0;transform:translate(calc(100% + 30px + var(--conversion-shift)),calc(-50% + var(--conversion-y))) rotate(var(--conversion-rotate))}.balance-amp{position:absolute;z-index:4;top:50%;left:50%;opacity:var(--amp-opacity);font-family:"Archivo Black",Impact,sans-serif;font-size:20px;transform:translate(calc(-50% + var(--amp-shift)),-50%);pointer-events:none}.balance-scale.is-dragging .balance-label{transition-duration:.1s}.balance-scale input{position:relative;z-index:3;width:100%;height:36px;margin:0;appearance:none;background:transparent;cursor:grab;touch-action:none}.balance-scale input:active{cursor:grabbing}.balance-scale input::-webkit-slider-runnable-track{height:4px;background:var(--ink);border-radius:999px}.balance-scale input::-moz-range-track{height:4px;background:var(--ink);border-radius:999px}.balance-scale input::-webkit-slider-thumb{width:30px;height:30px;margin-top:-13px;appearance:none;background:var(--coral);border:3px solid var(--ink);border-radius:50%;box-shadow:0 5px 0 var(--blue)}.balance-scale input::-moz-range-thumb{width:24px;height:24px;background:var(--coral);border:3px solid var(--ink);border-radius:50%;box-shadow:0 5px 0 var(--blue)}.balance-result{min-height:34px;margin:58px 0 0;opacity:0;transform:translateY(8px);font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:-.05em;text-transform:uppercase;transition:.3s ease}.balance-result.is-visible{opacity:1;transform:none}.balance-result small{font-size:.48em}
+
+    .case{padding:125px 0}.case-head{display:grid;grid-template-columns:1fr .72fr;gap:80px;align-items:end}.case-head h2{font-size:clamp(48px,6.5vw,88px)}.case-head>p{margin:0;color:var(--muted);font-size:17px}.case-body{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center;margin-top:70px}.angle-buttons{display:grid;margin-top:34px;border-top:1px solid var(--line)}.angle-buttons button{display:flex;align-items:center;justify-content:space-between;padding:17px 2px;background:none;border:0;border-bottom:1px solid var(--line);font-size:13px;font-weight:800;text-align:left;cursor:pointer}.angle-buttons button::after{content:"+";font-size:18px}.angle-buttons button.is-active{color:var(--blue)}.angle-buttons button.is-active::after{content:"●";font-size:10px}.angle-copy{min-height:44px;margin:22px 0 0;color:var(--muted);font-size:14px}.case-platforms{display:flex;flex-wrap:wrap;gap:7px;margin-top:25px}.case-platforms span{padding:7px 10px;background:var(--sky);border-radius:999px;font-size:9px;font-weight:800}.noka-deck{position:relative;justify-self:center;width:min(100%,480px);height:690px}.noka-card{position:absolute;top:50%;left:50%;width:70%;padding:0;overflow:hidden;aspect-ratio:9/16;background:#dce5d8;border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 58px rgba(16,17,20,.18);cursor:pointer;transition:transform .45s cubic-bezier(.2,.72,.2,1),filter .3s,opacity .3s}.noka-card video{display:block;width:100%;height:100%;object-fit:cover}.noka-card span{position:absolute;bottom:13px;left:13px;padding:7px 9px;color:#fff;background:rgba(0,0,0,.7);border-radius:999px;font-size:9px;font-weight:800}.noka-card.is-active{z-index:3;transform:translate(-50%,-50%)}.noka-card.is-left{z-index:1;opacity:.7;filter:saturate(.75);transform:translate(-78%,-47%) rotate(-6deg) scale(.81)}.noka-card.is-right{z-index:2;opacity:.85;filter:saturate(.9);transform:translate(-22%,-45%) rotate(6deg) scale(.86)}
+
+    .diagnostic{padding:120px 0;color:#fff;background:var(--blue)}.diagnostic h2{max-width:850px;font-size:clamp(48px,6.5vw,88px)}.diagnostic>div>p{max-width:700px;margin:28px 0 0;color:#dbe5ff;font-size:18px}.diagnostic-flow{display:grid;grid-template-columns:repeat(6,1fr);margin-top:64px;border-block:1px solid rgba(255,255,255,.34)}.diagnostic-flow span{display:grid;place-items:center;min-height:110px;padding:14px;text-align:center;border-right:1px solid rgba(255,255,255,.34);font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(12px,1.5vw,19px);text-transform:uppercase}.diagnostic-flow span:last-child{border-right:0}.diagnostic-note{margin-top:27px!important;color:#fff!important;font-weight:800}
+
+    .velocity{min-height:135vh;padding:100px 0;background:var(--white)}.velocity-sticky{position:sticky;top:82px;display:grid;grid-template-columns:1fr .86fr;gap:80px;align-items:center;min-height:calc(100vh - 100px)}.velocity-copy h2{font-size:clamp(48px,6.7vw,90px)}.velocity-copy>p:not(.eyebrow){max-width:570px;margin:26px 0 0;color:var(--muted);font-size:16px}.velocity-metrics{display:grid;grid-template-columns:repeat(2,1fr);max-width:480px;margin-top:42px;border-top:1px solid var(--line)}.velocity-metrics div{padding:14px 8px 14px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.velocity-metrics div:nth-child(2n){padding-left:16px;border-right:0}.velocity-metrics strong{display:block;font-family:"Archivo Black",Impact,sans-serif;font-size:27px}.velocity-metrics span{color:var(--muted);font-size:9px;font-weight:800;text-transform:uppercase}.creative-window{height:min(74vh,720px);overflow:hidden;border-radius:var(--radius);filter:drop-shadow(-18px 25px 32px rgba(18,20,25,.18));perspective:1000px;transform:perspective(1000px) rotateY(-7deg) rotateX(1.5deg);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent)}.creative-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:118%;margin:-190px 0 0 -9%;transform:rotate(-1.2deg)}.creative-column{display:flex;flex-direction:column;gap:8px;will-change:transform}.creative-column:nth-child(2){margin-top:-115px}.creative-card{position:relative;margin:0;overflow:hidden;aspect-ratio:9/16;background:#222;border-radius:9px}.creative-card video{display:block;width:100%;height:100%;object-fit:cover}.creative-card figcaption{position:absolute;bottom:8px;left:8px;padding:5px 7px;color:#fff;background:rgba(0,0,0,.7);border-radius:4px;font-size:7px;font-weight:800}
+
+    .friction{padding:125px 0}.friction-head{display:grid;grid-template-columns:1fr .75fr;gap:80px;align-items:end}.friction h2{font-size:clamp(52px,7vw,96px)}.time{justify-self:end}.time small{display:block;margin-bottom:8px;color:var(--muted);font-weight:800;letter-spacing:.1em}.time div{display:flex;align-items:center;gap:17px}.time strong{font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(30px,3vw,45px)}.time span{color:var(--coral);font-size:30px}.friction-body{display:grid;grid-template-columns:1.28fr .72fr;gap:60px;align-items:center;margin-top:60px}.browser{overflow:hidden;background:#111;border-radius:18px;box-shadow:0 35px 75px rgba(17,18,22,.2)}.browser-bar{display:flex;align-items:center;gap:6px;height:42px;padding:0 15px;background:#232427}.browser-bar span{width:8px;height:8px;background:#777;border-radius:50%}.browser-bar span:first-child{background:var(--coral)}.browser-bar p{margin:0 auto;padding-right:35px;color:#96989b;font-size:9px}.browser-view{height:650px;overflow:hidden}.browser-view img{display:block;width:100%;height:auto}.benefits{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.benefits li{padding:20px 0;border-bottom:1px solid var(--line)}.benefits strong{display:block;font-size:13px;text-transform:uppercase}.benefits p{margin:7px 0 0;color:var(--muted);font-size:13px}
+
+    .management{padding:120px 0;background:var(--lavender)}.management h2{max-width:940px;font-size:clamp(48px,6.4vw,86px)}.management-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:60px;border-block:1px solid var(--line)}.management-grid article{min-height:250px;padding:27px;border-right:1px solid var(--line)}.management-grid article:first-child{padding-left:0}.management-grid article:last-child{border-right:0}.management-grid span{color:var(--blue);font-size:10px;font-weight:900}.management-grid h3{margin:70px 0 10px;font-size:22px;letter-spacing:-.04em}.management-grid p{margin:0;color:var(--muted);font-size:13px}
+
+    .closing{padding:130px 0 90px;color:#fff;background:var(--ink)}.closing h2{max-width:1080px;font-size:clamp(53px,8vw,112px)}.closing h2 span{color:var(--yellow)}.closing h2 span.coral{color:var(--coral)}.closing-row{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-top:65px;padding-top:28px;border-top:1px solid rgba(255,255,255,.22)}.closing-row p{margin:0;color:#bfc2bc}.closing-row button{padding:0 0 5px;color:#fff;background:none;border:0;border-bottom:2px solid var(--coral);font-size:18px;font-weight:800;cursor:pointer}.copy-note{min-height:18px;margin:10px 0 0!important;color:var(--yellow)!important;font-size:11px}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.25,1)}.reveal.is-visible{opacity:1;transform:none}
+
+    @media(max-width:900px){.shell{width:min(100% - 36px,760px)}.hero{min-height:auto;padding-top:145px}.hero-bottom,.data-layout,.spark-intro,.case-head,.case-body,.velocity-sticky,.friction-head,.friction-body{grid-template-columns:1fr}.hero-note{justify-self:start}.data-layout,.spark-intro,.case-head,.case-body,.friction-head,.friction-body{gap:45px}.eater{min-height:430px}.diagnostic-flow{grid-template-columns:repeat(3,1fr)}.diagnostic-flow span:nth-child(3){border-right:0}.diagnostic-flow span:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.34)}.velocity{min-height:auto}.velocity-sticky{position:static}.creative-window{height:620px;transform:none}.time{justify-self:start}.management-grid{grid-template-columns:1fr}.management-grid article{min-height:0;padding:25px 0;border-right:0;border-bottom:1px solid var(--line)}.management-grid article:last-child{border-bottom:0}.management-grid h3{margin-top:28px}}
+    @media(max-width:580px){.shell{width:calc(100% - 28px)}.topbar{padding:14px}.nav a:not(:last-child){display:none}.hero{padding:115px 0 55px}.hero h1{font-size:clamp(47px,13.7vw,62px)}.hero-bottom{gap:28px;margin-top:34px}.hero-copy{font-size:17px}.story{padding:82px 0}.story-title{font-size:45px}.data-copy h2,.spark h2,.case-head h2,.diagnostic h2,.velocity-copy h2,.friction h2,.management h2{font-size:clamp(40px,12.7vw,56px)}.eater{min-height:330px;box-shadow:9px 10px 0 var(--yellow)}.eater-head{width:125px}.eater-body{width:190px;height:210px}.food-stream{left:45%}.quote-card{margin-top:70px;padding:37px 24px;box-shadow:8px 9px 0 var(--coral)}.quote-card blockquote{font-size:34px}.balance{padding:82px 0}.balance-scale{width:58vw;margin-top:82px}.noka-deck{height:540px}.diagnostic{padding:82px 0}.diagnostic-flow{grid-template-columns:repeat(2,1fr)}.diagnostic-flow span:nth-child(n){min-height:88px;border-right:1px solid rgba(255,255,255,.34);border-bottom:1px solid rgba(255,255,255,.34)}.diagnostic-flow span:nth-child(2n){border-right:0}.diagnostic-flow span:nth-last-child(-n+2){border-bottom:0}.velocity{padding:80px 0}.creative-window{height:500px}.creative-grid{gap:5px;width:112%;margin-left:-6%}.creative-column{gap:5px}.friction{padding:82px 0}.browser-view{height:400px}.time div{gap:10px}.management{padding:82px 0}.closing{padding:90px 0 65px}.closing h2{font-size:49px}.closing-row{display:block}.closing-row button{display:inline-block;margin-top:35px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.word-reveal .word{opacity:1;transform:none;transition:none}.food-stream span{animation:none}.creative-column{transform:none!important}.balance-label,.balance-amp{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top">AMBROISE GONON</a>
+    <nav class="nav"><a href="#noka">Noka</a><a href="#rivrs">Rivrs</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow reveal">CREATIVE STRATEGY · SOCIAL ADS DTC · PAID ACQUISITION</p>
+      <h1 class="display word-reveal">
+        <span class="line"><span class="word">J’ai</span> <span class="word">appris</span> <span class="word">à</span> <span class="word">lire</span></span>
+        <span class="line"><span class="word blue">les chiffres.</span></span>
+        <span class="line"><span class="word">Puis</span> <span class="word">à</span> <span class="word">écrire</span></span>
+        <span class="line"><span class="word scribble">ce qui les fait bouger.</span></span>
+      </h1>
+      <div class="hero-bottom reveal">
+        <p class="hero-copy">Formé à la rigueur de la performance, j’ai progressivement libéré mon instinct créatif — sans arrêter de vérifier ce qu’il produit.</p>
+        <p class="hero-note">En résumé : une idée doit arrêter le scroll. Puis survivre au funnel.</p>
+      </div>
+    </section>
+
+    <section class="story data-story">
+      <div class="shell data-layout">
+        <div class="data-copy reveal">
+          <p class="eyebrow">LE SOCLE</p>
+          <h2 class="display">J’ai mangé<br><span>de la data.</span></h2>
+          <p>ROAS, cohortes, LTV, rétention, attribution, funnels et conversion. J’ai appris à suivre un utilisateur du premier scroll jusqu’à la vente — et à voir où la performance se casse.</p>
+          <div class="data-chips"><span>ROAS</span><span>LTV</span><span>Cohortes</span><span>Rétention</span><span>Attribution</span><span>Conversion</span><span>Ventes</span></div>
+        </div>
+        <div class="eater reveal" aria-label="Silhouette avalant des indicateurs de performance">
+          <div class="eater-person"><div class="eater-head"></div><div class="eater-body"></div></div>
+          <div class="food-stream" aria-hidden="true"><span>ROAS</span><span>LTV</span><span>D7</span><span>CTR</span><span>CVR</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story spark">
+      <div class="shell">
+        <div class="spark-intro">
+          <h2 class="display word-reveal"><span class="word">Puis</span> <span class="word">j’ai</span> <span class="word">arrêté</span> <span class="word">d’attendre</span> <span class="word">que</span> <span class="word">les</span> <span class="word blue">dashboards</span> <span class="word">aient</span> <span class="word">des</span> <span class="word coral">idées.</span></h2>
+          <p class="spark-copy reveal">Les chiffres disent ce qui a marché. L’instinct, les signaux culturels et un peu de culot permettent de décider ce qu’on teste ensuite.</p>
+        </div>
+        <div class="quote-card reveal">
+          <blockquote>Mais d’où tu sors une idée pareille&nbsp;?</blockquote>
+          <cite>Édouard — mon collègue qui monte mes scripts</cite>
+        </div>
+        <p class="quote-answer reveal">Honnêtement ? Parfois, je ne sais pas. <strong>Ensuite on la produit, on la teste, et les chiffres tranchent.</strong></p>
+      </div>
+    </section>
+
+    <section class="balance" id="balance">
+      <div class="shell balance-layout">
+        <p class="eyebrow reveal">LE DILEMME</p>
+        <h2 class="display reveal">Viralité ou conversion&nbsp;?</h2>
+        <div class="balance-scale reveal" id="balanceScale">
+          <span class="balance-label balance-label--viral">Viralité</span>
+          <span class="balance-amp" aria-hidden="true">&amp;</span>
+          <input id="balanceRange" type="range" min="0" max="100" value="50" step="1" aria-label="Équilibrer viralité et conversion">
+          <span class="balance-label balance-label--conversion">Conversion</span>
+        </div>
+        <p class="balance-result" id="balanceResult">I <small>(try to)</small> do both.</p>
+      </div>
+    </section>
+
+    <section class="case" id="noka">
+      <div class="shell">
+        <div class="case-head">
+          <div class="reveal"><p class="eyebrow">NOKA MATCHA · E-COMMERCE</p><h2 class="display">Un produit.<br><span class="blue">Plusieurs portes d’entrée.</span></h2></div>
+          <p class="reveal">Goût, couleur, texture, rituel : je transforme les propriétés du produit en angles créatifs activables, puis je regarde lesquels contribuent réellement aux ventes.</p>
+        </div>
+        <div class="case-body">
+          <div class="reveal">
+            <div class="angle-buttons" id="angleButtons">
+              <button class="is-active" type="button" data-angle="texture">01 · Texture</button>
+              <button type="button" data-angle="color">02 · Couleur</button>
+              <button type="button" data-angle="ritual">03 · Rituel</button>
+            </div>
+            <p class="angle-copy" id="angleCopy">Rendre la texture et la préparation presque palpables.</p>
+            <div class="case-platforms"><span>META</span><span>GOOGLE</span><span>TIKTOK</span><span>PINTEREST</span><span>REPORTING CLIENT</span></div>
+          </div>
+          <div class="noka-deck reveal" id="nokaDeck">
+            <button class="noka-card is-active" type="button" data-angle="texture"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-texture.webp" data-src="../selected-work/media/web/noka-texture.mp4"></video><span>01 · TEXTURE</span></button>
+            <button class="noka-card is-right" type="button" data-angle="color"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-color.webp" data-src="../selected-work/media/web/noka-color.mp4"></video><span>02 · COULEUR</span></button>
+            <button class="noka-card is-left" type="button" data-angle="ritual"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/noka-ritual.webp" data-src="../selected-work/media/web/noka-ritual.mp4"></video><span>03 · RITUEL</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="diagnostic">
+      <div class="shell">
+        <p class="eyebrow reveal">LIRE UN COMPTE DANS SON ENSEMBLE</p>
+        <h2 class="display word-reveal"><span class="word">Une</span> <span class="word">créa</span> <span class="word">ne</span> <span class="word">performe</span> <span class="word">jamais</span> <span class="word">toute</span> <span class="word">seule.</span></h2>
+        <p class="reveal">Un mauvais résultat ne veut pas automatiquement dire « refaisons le hook ». Le problème peut se trouver ailleurs.</p>
+        <div class="diagnostic-flow reveal"><span>Créa</span><span>Offre</span><span>Audience</span><span>Saturation</span><span>Landing page</span><span>Unit economics</span></div>
+        <p class="diagnostic-note reveal">Je cherche l’endroit précis où la performance se casse — avant de demander une variation de plus au monteur.</p>
+      </div>
+    </section>
+
+    <section class="velocity" id="rivrs">
+      <div class="shell velocity-sticky">
+        <div class="velocity-copy reveal">
+          <p class="eyebrow">RIVRS · CREATIVE ENGINE</p>
+          <h2 class="display">Produire plus<br><span class="blue">pour tester plus.</span></h2>
+          <p>Je structure les briefs, les priorités et les boucles de feedback pour que davantage d’idées arrivent réellement jusqu’au test.</p>
+          <div class="velocity-metrics"><div><strong>50+</strong><span>vidéos / semaine</span></div><div><strong>50+</strong><span>créateurs</span></div><div><strong>5</strong><span>langues</span></div><div><strong>7</strong><span>personnes dans l’équipe</span></div></div>
+        </div>
+        <div class="creative-window reveal">
+          <div class="creative-grid">
+            <div class="creative-column" data-direction="-1">
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-question.webp" data-src="../selected-work/media/web/rivrs-question.mp4" data-start="2"></video><figcaption>HOOK TEST</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-progression.webp" data-src="../selected-work/media/web/rivrs-progression.mp4" data-start="11"></video><figcaption>PROGRESSION</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-rule.webp" data-src="../selected-work/media/web/rivrs-rule.mp4" data-start="5"></video><figcaption>ITERATION</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-unique.webp" data-src="../selected-work/media/web/rivrs-unique.mp4" data-start="4"></video><figcaption>CREATOR</figcaption></figure>
+            </div>
+            <div class="creative-column" data-direction="1">
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-contrarian.webp" data-src="../selected-work/media/web/rivrs-contrarian.mp4" data-start="13"></video><figcaption>CONTRARIAN</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-question.webp" data-src="../selected-work/media/web/rivrs-question.mp4" data-start="19"></video><figcaption>VARIANT 02</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-unique.webp" data-src="../selected-work/media/web/rivrs-unique.mp4" data-start="12"></video><figcaption>CREATOR</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-progression.webp" data-src="../selected-work/media/web/rivrs-progression.mp4" data-start="3"></video><figcaption>LOCALIZED</figcaption></figure>
+            </div>
+            <div class="creative-column" data-direction="-1">
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-rule.webp" data-src="../selected-work/media/web/rivrs-rule.mp4" data-start="16"></video><figcaption>ITERATION</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-contrarian.webp" data-src="../selected-work/media/web/rivrs-contrarian.mp4" data-start="25"></video><figcaption>HOOK</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-progression.webp" data-src="../selected-work/media/web/rivrs-progression.mp4" data-start="20"></video><figcaption>FORMAT</figcaption></figure>
+              <figure class="creative-card"><video muted loop playsinline preload="none" poster="../selected-work/media/posters/rivrs-question.webp" data-src="../selected-work/media/web/rivrs-question.mp4" data-start="8"></video><figcaption>VARIANT 04</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="friction">
+      <div class="shell">
+        <div class="friction-head">
+          <div class="reveal"><p class="eyebrow">PRODUCTION SYSTEM</p><h2 class="display">Réduire<br><span class="coral">la friction.</span></h2></div>
+          <div class="time reveal"><small>VIDEO PRODUCTION TIME</small><div><strong>30 MIN</strong><span>→</span><strong>3 MIN</strong></div></div>
+        </div>
+        <div class="friction-body">
+          <div class="browser reveal"><div class="browser-bar"><span></span><span></span><span></span><p>creative-production.local</p></div><div class="browser-view"><img src="../selected-work/media/web/remotion-tool.webp" alt="Outil interne de production vidéo avec Remotion" loading="lazy" width="1400" height="4852"></div></div>
+          <ul class="benefits reveal">
+            <li><strong>Une idée, plus de variantes</strong><p>Les templates transforment rapidement un script en plusieurs exécutions.</p></li>
+            <li><strong>Localisation intégrée</strong><p>Langues, voix et sous-titres vivent dans le même flux de production.</p></li>
+            <li><strong>Utilisable par l’équipe</strong><p>Moins d’allers-retours, moins de tâches répétitives, davantage de tests.</p></li>
+            <li><strong>IA avec une vraie utilité</strong><p>Accélérer l’idéation et l’itération, pas remplacer le regard créatif.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="management">
+      <div class="shell">
+        <p class="eyebrow reveal">MANAGEMENT · CLIENT · EXÉCUTION</p>
+        <h2 class="display word-reveal"><span class="word">Une</span> <span class="word">bonne</span> <span class="word">idée</span> <span class="word">doit</span> <span class="word">survivre</span> <span class="word blue">à l’exécution.</span></h2>
+        <div class="management-grid reveal">
+          <article><span>01</span><h3>Donner une direction</h3><p>Un objectif, un angle et une hypothèse que le créateur, le monteur et le client comprennent.</p></article>
+          <article><span>02</span><h3>Faire progresser l’équipe</h3><p>Priorisation, feedback régulier et montée en compétence — aujourd’hui avec une équipe de sept personnes.</p></article>
+          <article><span>03</span><h3>Rendre la stratégie lisible</h3><p>Roadmaps, résultats et prochaines décisions expliqués simplement, sans cacher l’essentiel dans un dashboard.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="contact">
+      <div class="shell">
+        <p class="eyebrow reveal">EN DEUX LIGNES</p>
+        <h2 class="display word-reveal"><span class="word">Je</span> <span class="word">cherche</span> <span class="word">l’</span><span class="word coral">étincelle créative.</span><br><span class="word">Puis</span> <span class="word">je</span> <span class="word">vérifie</span> <span class="word">qu’elle</span> <span class="word yellow">vend.</span></h2>
+        <div class="closing-row reveal"><div><p>Creative strategy · Paid social · Production systems</p><p class="copy-note" id="copyNote" aria-live="polite"></p></div><button type="button" id="copyEmail" data-copy="ambroise.gonon@gmail.com">ambroise.gonon@gmail.com</button></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const reducedMotion=matchMedia("(prefers-reduced-motion: reduce)");
+    const revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("is-visible");revealObserver.unobserve(entry.target)}})},{threshold:.1});
+    document.querySelectorAll(".reveal,.word-reveal").forEach(function(element){revealObserver.observe(element)});
+
+    const videoObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){const video=entry.target;if(entry.isIntersecting){if(!video.src){video.src=video.dataset.src;video.addEventListener("loadedmetadata",function(){const start=Number(video.dataset.start||0);if(start&&video.duration)video.currentTime=Math.min(start,video.duration-.25)},{once:true});video.load()}if(!reducedMotion.matches)video.play().catch(function(){})}else video.pause()})},{rootMargin:"180px 0px",threshold:.06});
+    document.querySelectorAll("video[data-src]").forEach(function(video){videoObserver.observe(video)});
+
+    const angleCopy={texture:"Rendre la texture et la préparation presque palpables.",color:"Faire du produit lui-même le hook visuel.",ritual:"Installer une humeur, un geste et une habitude quotidienne."};
+    const cards=Array.from(document.querySelectorAll(".noka-card"));
+    function activateAngle(angle){const buttons=Array.from(document.querySelectorAll("#angleButtons button"));buttons.forEach(function(button){button.classList.toggle("is-active",button.dataset.angle===angle)});document.getElementById("angleCopy").textContent=angleCopy[angle];const activeIndex=cards.findIndex(function(card){return card.dataset.angle===angle});cards.forEach(function(card,index){card.classList.remove("is-active","is-left","is-right");if(index===activeIndex)card.classList.add("is-active");else if((index-activeIndex+cards.length)%cards.length===1)card.classList.add("is-right");else card.classList.add("is-left")})}
+    document.getElementById("angleButtons").addEventListener("click",function(event){const button=event.target.closest("button[data-angle]");if(button)activateAngle(button.dataset.angle)});
+    document.getElementById("nokaDeck").addEventListener("click",function(event){const card=event.target.closest("button[data-angle]");if(card)activateAngle(card.dataset.angle)});
+
+    const scale=document.getElementById("balanceScale"),range=document.getElementById("balanceRange"),result=document.getElementById("balanceResult");
+    let dragging=false,resetFrame=0;
+    function updateBalance(value){const progress=Number(value)/100,width=scale.clientWidth,viral=scale.querySelector(".balance-label--viral"),conversion=scale.querySelector(".balance-label--conversion"),vw=viral.offsetWidth,cw=conversion.offsetWidth,mobile=innerWidth<=580;let vs=0,cs=0,vy=0,cy=0,vr=0,cr=0,opacity=0;if(progress>.5){const amount=(progress-.5)*2,eased=amount*amount*(3-2*amount);vs=eased*(mobile?width+2:width+vw+cw+74);vy=Math.sin(amount*Math.PI)*48;vr=Math.sin(amount*Math.PI)*7;opacity=Math.min(1,amount*2.4)}else if(progress<.5){const amount=(.5-progress)*2,eased=amount*amount*(3-2*amount);cs=-eased*(mobile?width+2:width+vw+cw+74);cy=Math.sin(amount*Math.PI)*48;cr=-Math.sin(amount*Math.PI)*7;opacity=Math.min(1,amount*2.4)}const vl=-vw-30+vs,vrEdge=-30+vs,cl=width+30+cs,crEdge=width+30+cw+cs,vc=(vl+vrEdge)/2,cc=(cl+crEdge)/2,gap=vc<cc?(vrEdge+cl)/2:(crEdge+vl)/2;scale.style.setProperty("--viral-shift",vs+"px");scale.style.setProperty("--conversion-shift",cs+"px");scale.style.setProperty("--viral-y",vy+"px");scale.style.setProperty("--conversion-y",cy+"px");scale.style.setProperty("--viral-rotate",vr+"deg");scale.style.setProperty("--conversion-rotate",cr+"deg");scale.style.setProperty("--amp-shift",gap-width/2+"px");scale.style.setProperty("--amp-opacity",dragging?opacity:0)}
+    function resetBalance(){dragging=false;scale.classList.remove("is-dragging");result.classList.remove("is-visible");cancelAnimationFrame(resetFrame);if(reducedMotion.matches){range.value=50;updateBalance(50);return}let position=Number(range.value),velocity=0;function settle(){velocity=(velocity+(50-position)*.13)*.72;position+=velocity;if(Math.abs(50-position)<.05&&Math.abs(velocity)<.05)position=50;range.value=position;updateBalance(position);if(position!==50)resetFrame=requestAnimationFrame(settle)}settle()}
+    range.addEventListener("pointerdown",function(){dragging=true;cancelAnimationFrame(resetFrame);scale.classList.add("is-dragging");result.classList.add("is-visible")});range.addEventListener("input",function(){result.classList.add("is-visible");updateBalance(range.value)});range.addEventListener("pointerup",resetBalance);range.addEventListener("pointercancel",resetBalance);range.addEventListener("change",resetBalance);range.addEventListener("blur",resetBalance);addEventListener("resize",function(){updateBalance(range.value)});updateBalance(50);
+
+    const velocity=document.querySelector(".velocity"),columns=Array.from(document.querySelectorAll(".creative-column"));let target=0,current=0;
+    function updateTarget(){if(reducedMotion.matches||innerWidth<=900)return;const rect=velocity.getBoundingClientRect();target=Math.min(1,Math.max(0,(innerHeight-rect.top)/(rect.height+innerHeight)))}
+    function animateWall(){current+=(target-current)*.075;columns.forEach(function(column,index){const direction=Number(column.dataset.direction),distance=150+index*18;column.style.transform="translate3d(0,"+(direction*(current-.5)*distance)+"px,0)"});requestAnimationFrame(animateWall)}
+    addEventListener("scroll",updateTarget,{passive:true});addEventListener("resize",updateTarget);updateTarget();if(!reducedMotion.matches)animateWall();
+    document.getElementById("copyEmail").addEventListener("click",async function(event){try{await navigator.clipboard.writeText(event.currentTarget.dataset.copy);document.getElementById("copyNote").textContent="Email copié."}catch(error){document.getElementById("copyNote").textContent="Sélectionne l’adresse pour la copier."}});
+  </script>
+</body>
+</html>
